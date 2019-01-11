@@ -4,7 +4,7 @@ Use IBM Cloud Container Registry to safely store and access private Docker image
 
 IBM Cloud Container Registry provides a multi-tenant, highly available, and scalable private image registry that is hosted and managed by IBM. You can use the private registry by setting up your own image namespace and pushing Docker images to your namespace.
 
-![Image showing how you can interact with IBM Cloud Container Registry.](https://console.bluemix.net/docs/api/content/services/Registry/images/registry_architecture1.svg)
+![Image showing how you can interact with IBM Cloud Container Registry.](registry-architecture.png)
 
 ## Features
 
