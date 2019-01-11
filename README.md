@@ -1,6 +1,6 @@
 # Securing your IBM Cloud Kubernetes Service workloads with IBM Cloud Container Registry
 
-Think 2019 session 2406
+![Session 2406 at Think 2019](https://www.ibm.com/events/shared/img/think2019/think-2019-branding-footer.jpg)
 
 ## Objectives
 
