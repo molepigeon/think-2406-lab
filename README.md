@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# Securing your IBM Kubernetes workloads with IBM Cloud Container Registry
 
-You can use the [editor on GitHub](https://github.com/molepigeon/think-2406-lab/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Think 2019 session 2406
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Objectives
 
-### Markdown
+To learn you cloud and stuff! Specifically, the parts about getting your stuff into a cloud Kubernetes cluster, and operating it once it's there.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Audience
 
-```markdown
-Syntax highlighted code block
+You need a basic understanding of operating Kubernetes to get the most out of this tutorial, but you can complete the exercises without it.
 
-# Header 1
-## Header 2
-### Header 3
+## Session structure
 
-- Bulleted
-- List
+The session is comprised of a number of exercises focused around the tool that you'll be using.
 
-1. Numbered
-2. List
+## Exercises
 
-**Bold** and _Italic_ and `Code` text
+1. [Registry](exercise_1_registry.html)
 
-[Link](url) and ![Image](src)
-```
+## Help
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+If you're completing the steps for this tutorial in the scheduled slot at the conference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
 
-### Jekyll Themes
+If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth will be able to contact the speakers.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/molepigeon/think-2406-lab/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Further reading
 
-### Support or Contact
+[IBM Cloud Container Registry product page](https://icr.io)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Legal stuff
