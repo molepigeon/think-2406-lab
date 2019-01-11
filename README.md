@@ -12,13 +12,15 @@ Although prior experience of operating Kubernetes and using command line tools w
 
 ## Session structure
 
-The session is comprised of a number of exercises focused around the tool that you'll be using.
+The session is comprised of a number of exercises focused around the tool that you'll be using. The exercises build upon one another, and sometimes it is assumed that you have everything from the previous exercises set up, so it's best to complete the exercises in order. The simplest way to navigate this tutorial is the **Next** and **Previous** buttons at the bottom of each page, but you can also click a particular section in the sidebar to jump to it.
 
 ## Help
 
-If you're completing the steps for this tutorial in the scheduled slot at the conference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
+If you're completing the steps for this tutorial in the scheduled slot at the Think 2019 onference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
 
-If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth will be able to contact the speakers.
+If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth or the open lab classroom have contact information for the speakers and can pass on your questions.
+
+If you're not at Think 2019, or you're finishing this tutorial after the conference, you can contact the speakers by using the #container-registry channel in the [IBM Kubernetes Service Slack](https://bxcs-slack-invite.mybluemix.net/).
 
 ## Feedback
 
