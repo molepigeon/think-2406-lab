@@ -8,7 +8,7 @@ To learn you cloud and stuff! Specifically, the parts about getting your stuff i
 
 ## Audience
 
-Although prior experience of operating Kubernetes and using IBM Cloud Container Registry would be beneficial, this session is suitable for any user who wishes to learn how to use IBM Cloud Container Registry to secure IBM Cloud Kubernetes workloads.
+Although prior experience of operating Kubernetes and using command line tools would be beneficial, this session is suitable for any user who wishes to learn how to use IBM Cloud tools to secure Kubernetes workloads.
 
 ## Session structure
 
@@ -19,6 +19,12 @@ The session is comprised of a number of exercises focused around the tool that y
 If you're completing the steps for this tutorial in the scheduled slot at the conference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
 
 If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth will be able to contact the speakers.
+
+## Feedback
+
+Don’t forget to submit your Think 2019 session and speaker feedback! Your feedback is very important to us – we use it to continually improve the conference.
+
+Access the Think 2019 agenda tool to quickly submit your surveys from your smartphone, laptop or conference kiosk.
 
 ## Further reading
 
