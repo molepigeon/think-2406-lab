@@ -1,6 +1,8 @@
 # IBM Cloud Container Registry
 
-Use IBM Cloud Container Registry to safely store and access private Docker images in a highly available and scalable architecture.
+In this exercise, you will use IBM Cloud Container Registry to securely deliver container images to your Kubernetes cluster. You will configure IAM policies to control access to images, and configure your cluster to prevent vulnerable or untrusted images from being used in pods.
+
+You can use IBM Cloud Container Registry to safely store and access private Docker images in a highly available and scalable architecture.
 
 IBM Cloud Container Registry provides a multi-tenant, highly available, and scalable private image registry that is hosted and managed by IBM. You can use the private registry by setting up your own image namespace and pushing Docker images to your namespace.
 
