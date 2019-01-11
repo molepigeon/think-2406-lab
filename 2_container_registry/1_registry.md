@@ -1,13 +1,29 @@
-# Exercise 1: Container Registry
+# IBM Cloud Container Registry
 
-Bacon ipsum dolor amet doner pork chop boudin filet mignon. Biltong ham hock brisket buffalo cow alcatra fatback pork chop burgdoggen shankle frankfurter leberkas pork loin. Short loin andouille rump sausage meatball. Ground round flank andouille shoulder, boudin strip steak tenderloin alcatra biltong short loin buffalo ribeye. Ribeye beef short loin tri-tip. Pork chop bacon biltong, frankfurter salami buffalo sausage brisket strip steak sirloin prosciutto.
+Use IBM Cloud Container Registry to safely store and access private Docker images in a highly available and scalable architecture.
 
-Doner pork andouille ball tip, salami ground round turkey shankle brisket boudin chicken. Andouille frankfurter turducken meatloaf capicola. Turducken salami short loin t-bone swine tongue, short ribs meatloaf shoulder. Doner cupim pancetta swine strip steak shoulder boudin tail picanha filet mignon kevin meatball venison salami turkey. Tail pastrami chicken porchetta pork t-bone fatback pork belly venison rump jowl. Bacon doner jerky kevin boudin cow. Strip steak swine cupim beef, filet mignon tri-tip jowl turducken flank tenderloin.
+IBM Cloud Container Registry provides a multi-tenant, highly available, and scalable private image registry that is hosted and managed by IBM. You can use the private registry by setting up your own image namespace and pushing Docker images to your namespace.
 
-Burgdoggen cupim biltong spare ribs pork loin landjaeger chicken pork bacon pork belly. Pancetta t-bone prosciutto ground round pork belly meatloaf ball tip flank burgdoggen beef sirloin. Short loin t-bone swine turkey alcatra strip steak. Biltong ham pancetta rump kevin. Tri-tip cow sirloin t-bone flank pork belly chicken short ribs beef corned beef. Kielbasa frankfurter strip steak sirloin picanha. Beef shank sausage prosciutto, pig picanha turkey.
+![Image showing how you can interact with IBM Cloud Container Registry. Container Registry contains both private and public repositories, and APIs to interact with the service. Your local Docker client can pull and push images to and from your private repositories in the registry, and can pull public repositories. The IBM Cloud web UI (console) interacts with the Container Registry API to list images. The Container Registry CLI interacts with the API to list, create, inspect, and remove images, as well as other administrative functions. Your local Docker client can also pull and push images from your local image store to other registries.](https://console.bluemix.net/docs/api/content/services/Registry/images/registry_architecture1.svg)
 
-Kielbasa venison cupim, ham hock pork chop shoulder capicola pork belly. Salami leberkas burgdoggen drumstick bresaola, sirloin prosciutto tri-tip shoulder rump swine pork chop jowl cupim bacon. Corned beef brisket leberkas, chuck venison t-bone turkey pork chop kielbasa short ribs. Pork belly pastrami jerky venison, short ribs tri-tip salami brisket buffalo shoulder turducken pancetta landjaeger meatloaf strip steak.
+## Features
 
-Beef ribs doner turkey jowl, tenderloin shankle chuck spare ribs kevin prosciutto. Pig pastrami ball tip shoulder buffalo boudin tail turducken chuck pancetta. Alcatra ham hock rump pork chop flank pancetta shank frankfurter brisket burgdoggen fatback short ribs turducken. Jowl short ribs beef ribs, short loin venison ground round meatloaf pancetta corned beef hamburger ham hock buffalo.
+### Highly available and scalable private registry
 
-[baconipsum](baconipsum.com)
+Set up your own image namespace in a multi-tenant, highly available, scalable private registry that is hosted and managed by IBM.
+
+Securely store your private Docker images and share them with users in your IBM Cloud account.
+
+### Security
+
+Integrated with Identity and Access Management to provide fine-grained access controls to users within your IBM Cloud account.
+
+Vulnerability scanning, deployment policy enforcement, and comprehensive risk assessment and prioritization provide security compliance insight and controls over static images and live containers.
+
+Uses Notary technology to store trusted content; allows you to control and mandate signatures for your images.
+
+Images are encrypted in transit and at rest in IBM Cloud Object Storage.
+
+### Integration
+
+IBM Cloud preferred image registry; pre-integrated with our Kubernetes Service for your DevOps workflow using IBM Open Toolchain or your existing CI/CD toolset.

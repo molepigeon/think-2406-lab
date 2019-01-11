@@ -1,9 +1,9 @@
-# Get Started
+# Getting Started
 
 In this section, you will create your own IBM Cloud account, and then get access to a IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.
 
 1. Create your own [IBM Cloud account](https://cloud.ibm.com).
-2. After the email verification, confirm by logging in to https://cloud.ibm.com
+2. After the email verification, confirm by logging in to <https://cloud.ibm.com>.
 3. Go to [Get Cluster](https://get-cluster.mybluemix.net) web page and enter your IBM ID (the email you used to sign up) and the lab key `wrong`. **TODO set password to the right one**
 
     ![cluster assignment tool](https://raw.githubusercontent.com/rvennam/istio101/master/workshop/README_images/get-cluster.png)
