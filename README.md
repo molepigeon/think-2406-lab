@@ -8,7 +8,7 @@ To learn you cloud and stuff! Specifically, the parts about getting your stuff i
 
 ## Audience
 
-You need a basic understanding of operating Kubernetes to get the most out of this tutorial, but you can complete the exercises without it.
+Although prior experience of operating Kubernetes and using IBM Cloud Container Registry would be beneficial, this session is suitable for any user who wishes to learn how to use IBM Cloud Container Registry to secure IBM Cloud Kubernetes workloads.
 
 ## Session structure
 
