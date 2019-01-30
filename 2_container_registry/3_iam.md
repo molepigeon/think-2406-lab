@@ -102,4 +102,10 @@ You can use Service IDs to finely control automation access to the resources in 
 
 You can also create policies for other users in your account to control what resources they have access to.
 
+## Further Reading
+
+**TODO**
+
+## Next
+
 In the next section, you will set up your Kubernetes cluster to access your images.
