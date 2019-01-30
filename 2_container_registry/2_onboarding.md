@@ -62,3 +62,9 @@ Because the domain name of the registry is in the image name, to upload an image
 5. Confirm that the image has been uploaded successfully.
 
     `ibmcloud cr images`
+
+## Recap
+
+You have set up an IBM Cloud Container Registry namespace in your account and pushed an image to it.
+
+In the next section, you will use IBM Cloud Identity and Access Management (IAM) to control access to your images.
