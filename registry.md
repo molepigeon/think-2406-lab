@@ -10,19 +10,19 @@ IBM Cloud Container Registry provides a multi-tenant, highly available, and scal
 
 ## Features
 
-**Highly available and scalable private registry**
+### Highly available and scalable private registry
 
 * Set up your own image namespace in a multi-tenant, highly available, scalable private registry that is hosted and managed by IBM.
 * Securely store your private Docker images and share them with users in your IBM Cloud account.
 
-**Security**
+### Security
 
 * Integrated with Identity and Access Management (IAM) to provide fine-grained access controls to users within your IBM Cloud account.
 * Vulnerability scanning, deployment policy enforcement, and comprehensive risk assessment and prioritization provide security compliance insight and controls over static images and live containers.
 * Uses Notary technology to store trusted content; allows you to control and mandate signatures for your images.
 * Images are encrypted in transit and at rest in IBM Cloud Object Storage.
 
-**Integration**
+### Integration
 
 * IBM Cloud preferred image registry; pre-integrated with IBM Cloud Kubernetes Service for your DevOps workflow by using IBM Open Toolchain or your existing CI/CD toolset.
 
@@ -33,19 +33,17 @@ Although prior experience of operating Kubernetes and of using IBM Cloud Contain
 ## Objectives
 
 The different sections in this part of the lab will show you how to:
+
 * Start using IBM Cloud Container Registry to store your Docker images
 * Secure access to your private registry by using IAM
 * Configure a Kubernetes cluster so that you can run images from your private registry
 * Use Vulnerability Advisor to view information about vulnerabilities in your images
-* Install Container Image Security Enforcement and prevent vulnerable images from running
-in your cluster
-* Sign images in your private registry by using Docker Content Trust, and then use Container
-Image Security Enforcement to prevent unsigned images from running in your cluster.
+* Install Container Image Security Enforcement and prevent vulnerable images from running in your cluster
+* Sign images in your private registry by using Docker Content Trust, and then use Container Image Security Enforcement to prevent unsigned images from running in your cluster.
 
 ## Duration
 
 The estimated time to complete this part of the lab is 1 hour.
-
 
 ## Further reading
 

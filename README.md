@@ -6,19 +6,15 @@ As a result, your use of traditional logging and monitoring tools is not enough.
 
 In this lab, you will learn about IBM® Cloud Container Registry , IBM Log Analysis with LogDNA, and IBM Cloud Monitoring with Sysdig. Find out how you can use these services to gain operational visibility of your Kubernetes clusters, and how you can use content trust and vulnerability scanning in IBM Cloud Container Registry to ensure that your workloads are correct and vulnerability free before deploying them.
 
-
 ![Session 2406 at Think 2019](https://www.ibm.com/events/shared/img/think2019/think-2019-branding-footer.jpg)
-
 
 ## Agenda
 
-The lab is divide into three parts:
+The lab is divided into three parts:
+
 * Part 1: Securing your IBM Cloud Kubernetes Service workloads with IBM Cloud Container Registry
 * Part 2: Cluster-level logging by using IBM Log Analysis with LogDNA
 * Part 3: Monitoring a Kubernetes cluster in IBM Cloud by using IBM Cloud Monitoring with Sysdig
-
-
-
 
 ## Audience
 
@@ -37,4 +33,3 @@ If you're completing the steps for this tutorial in the scheduled slot at the Th
 If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth or the open lab classroom have contact information for the speakers and can pass on your questions.
 
 If you're not at Think 2019, or you're finishing this tutorial after the conference, you can contact the speakers by using the #container-registry channel in the [IBM Kubernetes Service Slack](https://bxcs-slack-invite.mybluemix.net/).
-

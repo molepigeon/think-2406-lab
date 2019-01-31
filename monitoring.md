@@ -31,7 +31,6 @@ IBM Cloud Monitoring with Sysdig auto-discovers Kubernetes environments and prov
 IBM Cloud Monitoring with Sysdig includes alerts and multi-channel notifications that you can use to reduce the impact on your day-to-day operations and accelerate your reaction and response time to anomalies, downtime, and performance degradation. Notification channels that you can easily configure
 include email, Slack, PagerDuty, webhooks, Opsgenie, and VictorOps.
 
-
 ## Audience
 
 This section of the lab is suitable for any users that want to deep dive into how to use the IBM Cloud Monitoring with Sysdig service and learn how to use this service to monitor the health of deployed resources in a Kubernetes cluster.
@@ -39,19 +38,16 @@ Knowledge
 
 You are expected to understand the basic concepts of microservice applications, containers, and Kubernetes.
 
-
 ## Objectives
 
 The different sections in this part of the lab will show you how to:
 
 * Provision the IBM Cloud Monitoring with Sysdig service
 * Configure a Kubernetes cluster so that you can monitor its health and performance by using the IBM Cloud Monitoring with Sysdig service
-* Launch the Sysdig web UI from where you can monitor and manage your
-environments
+* Launch the Sysdig web UI from where you can monitor and manage your environments
 * Explore a microservices application by using IBM Cloud Monitoring with Sysdig
 * Monitor an application that is running in a cluster
 * Define an alert to notify you about errors
-
 
 ## Duration
 

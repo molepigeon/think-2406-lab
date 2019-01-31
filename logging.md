@@ -11,7 +11,7 @@ IBM Log Analysis with LogDNA offers administrators, DevOps teams, and developers
 The following figure shows the components overview for the IBM Log Analysis with LogDNA service that is running on IBM Cloud:
 
 [Components overview of IBM Log Analysis with LogDNA)](logging_ov.png)
- 
+
 ## Features
 
 **Troubleshoot logs in real-time to diagnose issues and identify problems.**
@@ -30,7 +30,6 @@ Export specific log lines to a local copy or archive logs from IBM Log Analysis 
 
 Control the cost of your logging infrastructure in IBM Cloud by configuring the log sources for which you want to collect and manage logs.
 
-
 ## Audience
 
 This section of the lab is suitable for any users with no previous knowledge of the service that want to learn how to use the IBM Log Analysis with LogDNA service.
@@ -40,16 +39,15 @@ This section of the lab is suitable for any users with no previous knowledge of 
 The different sections in this part of the lab will show you how to:
 
 * Provision the IBM Log Analysis with LogDNA service
-* Configure a Kubernetes cluster so that you can monitor its logs by using the IBM Log
-Analysis with LogDNA service
+* Configure a Kubernetes cluster so that you can monitor its logs by using the IBM Log Analysis with LogDNA service
 * Launch the LogDNA web UI from where you can monitor and manage your logs
 * Explore the LogDNA web to learn about the different sections
 
-The following sections are optional and require a paid service plan. This lab include sections to show you how to: 
+The following sections are optional and require a paid service plan. This lab include sections to show you how to:
+
 * Create an alert
 * Export log data
 
- 
 ## Duration
 
 The estimated time to complete this part of the lab is 20 minutes.
