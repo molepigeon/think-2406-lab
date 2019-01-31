@@ -52,20 +52,103 @@ Let's look at the Image Pull Secrets that have been added to your cluster by def
 
     The data is a JSON object containing a username and password for `registry.ng.bluemix.net`. The username is `token`.
 
+When you create a pod from an image in the same IBM Cloud account as your Kubernetes cluster, you don't need to specify these default secrets. When you start a pod, Kubernetes automatically adds these Image Pull Secrets to your pod definition, because the secrets are listed in the default Service Account.
+
+1. List Service Accounts in the default Kubernetes namespace.
+
+    `kubectl get serviceaccounts`
+
+2. Get the default Service Account as YAML.
+
+    `kubectl get sa default -o yaml`
+
+    The default Image Pull Secrets are listed in the `imagePullSecrets` section.
+
 ## Creating an Image Pull Secret
 
 The token in the default secret has access to pull images that are owned by the cluster's account. Since your images are stored in your account, you must create your own Image Pull Secret to access your images.
 
-1. Create an Image Pull Secret for your Service ID. Replace `<apikey>` with your Service ID API key.
+1. Create an Image Pull Secret called `think-registry-demo` for your Service ID. Replace `<apikey>` with your Service ID API key.
 
-    `kubectl create secret docker-registry --docker-server registry.ng.bluemix.net --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com`
+    Note that the `docker-server` value includes your Registry namespace. Because the secret is configured in this way, Kubernetes will only use this Image Pull Secret for images in your namespace, and it will use the default secret for other images.
 
-Add IPS to default SA?
+    `kubectl create secret docker-registry think-registry-demo --docker-server registry.ng.bluemix.net/my_namespace --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com`
 
-Create pod from image in our namespace
+2. As with the default Image Pull Secrets, you can add your new Image Pull Secret to the default Service Account so that you don't have to manually add the secret to each pod that you run. You can do this interactively or by using `kubectl patch`.
 
-If added to default SA, show the IPS being injected automatically
+    1. Edit the default Service Account interactively, and add your new secret to the list:
+
+        1. Open the default Service Account for editing. The default editor for `kubectl edit` is `vim`.
+
+            `kubectl edit sa default`
+
+        2. Add the following YAML to the bottom of the existing `imagePullSecrets` list. In vim, press `I` to enter insert mode.
+
+            ```yaml
+            - name: think-registry-demo
+            ```
+
+        3. Save and close the file.
+
+            `Esc, :wq, Enter`
+
+    2. Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
+
+        `kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'`
+
+## Starting a pod
+
+1. Create a YAML file. Call it `mypod.yaml`. Add the following YAML.
+
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+    name: nginx
+    labels:
+        name: nginx
+    spec:
+        containers:
+        - name: nginx
+            image: registry.ng.bluemix.net/my_namespace/
+            ports:
+            - containerPort: 80
+    ```
+
+    **Hint**: Don't forget to replace `my_namespace` with your Registry namespace.
+
+2. Apply the yaml.
+
+    `kubectl apply -f mypod.yaml`
+
+3. List pods in your cluster.
+
+    `kubectl get pods`
+
+    A pod called `nginx` appears in the list.
+
+4. Describe the pod.
+
+    `kubectl describe pod nginx`
+
+    **TODO** There's got to be some information that's worth looking at in here!
+
+5. Get the pod specification.
+
+    `kubectl get pod nginx -o yaml`
+
+    Note that your Image Pull Secret has been injected from the default Service Account.
 
 ## Recap
 
-You can have multiple Image Pull Secrets in your cluster for the same registry.
+You have created an Image Pull Secret for your IAM Service ID and used it to create a pod from an image in your IBM Cloud Container Registry namespace.
+
+You can have multiple Image Pull Secrets in your cluster for the same registry. This allows you to finely control what images a given Kubernetes resource can access.
+
+## Further Reading
+
+**TODO**
+
+## Next
+
+In the next section, you will use Vulnerability Advisor to detect vulnerabilities in your private images.
