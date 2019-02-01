@@ -6,7 +6,7 @@ IBM Cloud Monitoring with Sysdig is a co-branded cloud-native, and container- in
 
 The following diagram shows the components overview for the IBM Cloud Monitoring with Sysdig service that is running on IBM Cloud:
 
-[monitoring_ov.png](Components overview of IBM Cloud Monitoring with Sysdig)
+![Components overview of IBM Cloud Monitoring with Sysdig](monitoring_ov.png)
 
 ## Features
 
