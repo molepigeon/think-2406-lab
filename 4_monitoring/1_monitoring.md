@@ -34,7 +34,8 @@ include email, Slack, PagerDuty, webhooks, Opsgenie, and VictorOps.
 ## Audience
 
 This section of the lab is suitable for any users that want to deep dive into how to use the IBM Cloud Monitoring with Sysdig service and learn how to use this service to monitor the health of deployed resources in a Kubernetes cluster.
-Knowledge
+
+## Knowledge
 
 You are expected to understand the basic concepts of microservice applications, containers, and Kubernetes.
 
