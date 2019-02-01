@@ -117,7 +117,7 @@ The token in the default secret has access to pull images that are owned by the 
 
     **Hint**: Don't forget to replace `my_namespace` with your Registry namespace.
 
-2. Apply the yaml.
+2. Apply the YAML file.
 
     `kubectl apply -f mypod.yaml`
 
