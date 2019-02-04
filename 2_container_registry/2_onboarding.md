@@ -31,41 +31,73 @@ From now on, this guide will use `my_namespace` as the namespace. When you see `
 
     If your chosen namespace name is available, it is assigned to your account. If you see a message saying that your chosen namespace is already in use, try again with a different namespace name.
 
-## Pushing an image
+## Creating an image
+
+Containers are created from images, which contain the initial state of a container's filesystem as well as important metadata about how to start the image, such as which binary should be executed. Docker container images are defined in a Dockerfile, which defines a series of steps that should be executed in order that produce the layers of the image. Each step results in one layer in the image.
 
 A container image name is made up of two parts, a repository and a tag, in the format `repository:tag`. The repository is a URI of where on the Internet the image can be found, and the tag is a version for the image. For example, in `icr.io/ibm/datashield-server:0.2.38`, the repository is `icr.io/ibm/datashield-server`, and the tag is `0.2.38`.
 
 Because the domain name of the registry is in the image name, to upload an image we name it with the correct address and then issue `docker push` to upload it.
 
-1. To upload, or push, an image into Container Registry, we must first download an image. Let's use `gliderlabs/alpine:3.6`, an image stored in Docker Hub.
+1. Create a folder for our image and navigate into it.
 
-    `docker pull gliderlabs/alpine:3.6`
+    `mkdir myimage; cd myimage`
 
-    If the repository does not include a domain name, the `docker` command line assumes that we want to use Docker Hub.
+    **Best practice tip**: Keep the folder that contains your Dockerfile as minimal as possible, and only include objects that are required for your image build. When you run `docker build` later, the contents of the folder that contains the Dockerfile and all sub-directories are added to the build context. When a lot of files are in the build context, it can take a while for the build to start while Docker transfers the build context to its daemon or the remote build server.
 
-2. Rename the image ready for it to be sent to IBM Cloud Container Registry.
+2. Create a Dockerfile.
 
-    `docker tag gliderlabs/alpine:3.6 us.icr.io/my_namespace/alpine:3.6`
+    `touch Dockerfile`
 
-    **Hint**: `us.icr.io` is the address of the US South instance of IBM Container Registry. Don't forget to replace `my_namespace` with your chosen namespace name.
+3. Open the Dockerfile.
 
-3. Examine the container images stored your computer.
+    `open Dockerfile`
 
-    `docker images`
+4. Copy the following instructions into the Dockerfile, then save the file and exit the editor.
 
-    Look for `gliderlabs/alpine:3.6` and note the value in the Image ID field, then compare it to the value for `us.icr.io/my_namespace/alpine:3.6`. They should be the same, because that image is now referred to by both names on your computer.
+    ```Dockerfile
+    FROM gliderlabs/alpine:3.6
+    ADD github.com/molepigeon/helloworld .
+    EXPOSE 8080
+    CMD helloworld
+    ```
 
-4. Push the image to IBM Cloud Container Registry.
+    **TODO** Create the helloworld binary and fix the URL in the Dockerfile
 
-    `docker push us.icr.io/my_namespace/alpine:3.6`
+    Let's explore this Dockerfile a bit.
 
-5. Confirm that the image has been uploaded successfully.
+    * The `FROM` instruction is an image that exists in a registry already that is used as a starting point for our image.
+    * The `ADD` instruction adds files to the image from either the filesystem or, as in this case, a web address for a Hello World web application.
+    * The `EXPOSE` instruction tells the container runtime to expect that this container will be running a server on the given port, in this case 8080.
+    * The `CMD` instruction defines the command to be executed when a container is started from this image.
+
+5. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
+
+    `docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+
+    **Hint**: `registry.ng.bluemix.net` is the address of the US South instance of IBM Container Registry. Don't forget to replace `my_namespace` with your chosen namespace name.
+
+## Pushing your image
+
+1. Log in to IBM Cloud Container Registry for pushing images.
+
+    `ibmcloud cr login`
+
+    This command wraps `docker login` to authenticate your Docker command line with IBM Cloud Container Registry.
+
+2. Push the image to IBM Cloud Container Registry.
+
+    `docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+
+3. Confirm that the image has been uploaded successfully.
 
     `ibmcloud cr images`
 
+    Note that the image list shows vulnerabilities in the status column. You will explore Vulnerability Advisor and resolve these vulnerabilities later in this tutorial.
+
 ## Recap
 
-You have set up an IBM Cloud Container Registry namespace in your account and pushed an image to it.
+You have set up an IBM Cloud Container Registry namespace in your account, built an image, and pushed your image into your namespace.
 
 ## Further Reading
 
