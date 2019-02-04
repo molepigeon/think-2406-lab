@@ -41,7 +41,7 @@ Because the domain name of the registry is in the image name, to upload an image
 
 1. Create a folder for our image and navigate into it.
 
-    `mkdir myimage; cd myimage`
+    `mkdir ~/myimage; cd ~/myimage`
 
     **Best practice tip**: Keep the folder that contains your Dockerfile as minimal as possible, and only include objects that are required for your image build. When you run `docker build` later, the contents of the folder that contains the Dockerfile and all sub-directories are added to the build context. When a lot of files are in the build context, it can take a while for the build to start while Docker transfers the build context to its daemon or the remote build server.
 
@@ -73,7 +73,7 @@ Because the domain name of the registry is in the image name, to upload an image
 
 5. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
 
-    `docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    `docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6 .`
 
     **Hint**: `registry.ng.bluemix.net` is the address of the US South instance of IBM Container Registry. Don't forget to replace `my_namespace` with your chosen namespace name.
 
