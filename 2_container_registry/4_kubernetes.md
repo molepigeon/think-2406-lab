@@ -98,19 +98,19 @@ The token in the default secret has access to pull images that are owned by the 
 
 ## Starting a pod
 
-1. Create a YAML file. Call it `mypod.yaml`. Add the following YAML.
+1. Create a YAML file. Call it `~/mypod.yaml`. Add the following YAML.
 
     ```yaml
     apiVersion: v1
     kind: Pod
     metadata:
-    name: nginx
+    name: mypod
     labels:
-        name: nginx
+        name: mypod
     spec:
         containers:
-        - name: nginx
-            image: registry.ng.bluemix.net/my_namespace/
+        - name: mypod
+            image: registry.ng.bluemix.net/my_namespace/hello-world:3.6
             ports:
             - containerPort: 80
     ```
@@ -119,25 +119,29 @@ The token in the default secret has access to pull images that are owned by the 
 
 2. Apply the YAML file.
 
-    `kubectl apply -f mypod.yaml`
+    `kubectl apply -f ~/mypod.yaml`
 
 3. List pods in your cluster.
 
     `kubectl get pods`
 
-    A pod called `nginx` appears in the list.
+    A pod called `mypod` appears in the list.
 
 4. Describe the pod.
 
-    `kubectl describe pod nginx`
+    `kubectl describe pod mypod`
 
     **TODO** There's got to be some information that's worth looking at in here!
 
 5. Get the pod specification.
 
-    `kubectl get pod nginx -o yaml`
+    `kubectl get pod mypod -o yaml`
 
     Note that your Image Pull Secret has been injected from the default Service Account.
+
+6. Delete the pod.
+
+    `kubectl delete pod mypod`
 
 ## Recap
 
