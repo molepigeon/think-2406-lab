@@ -58,7 +58,7 @@ Open a terminal in your local environment and complete the following steps to co
     kubectl create secret generic logdna-agent-key --from-literal=logdna-agent-key=<logDNA_ingestion_key>
     ```
 
-    Copy the second command and run it in your termina. In this step, you create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
+    Copy the second command and run it in your terminal to create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
 
     ```
     kubectl create -f https://repo.logdna.com/ibm/prod/logdna-agent-ds-us-south.yaml

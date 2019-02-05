@@ -2,32 +2,51 @@
 
 Complete the following steps to create a view:
 
-Click the **Views** icon.
+1. Click the **Views** icon.
 
-Select **Everything.**
+    ![image16](images/logdna_img16.png)
 
-Select **All Apps** to list the log level values that you can choose from to include or exclude entries.
+2. Select **Everything.**
 
-Select **calico-node** to filter in log entries from the calico-node app.
+3. Select **All Apps** to list the log level values that you can choose from to include or exclude entries.
 
-Click **All Apps** again to close the selection panel.
+    ![image17](images/logdna_img17.png)
 
-Notice that section **Unsaved View**.
+4. Select **calico-node** to filter in log entries from the calico-node app.
 
-Click **Unsaved View**.
+    ![image18](images/logdna_img18.png)
 
-Select **Save as new view /alert**.
+5. Click **All Apps** again to close the selection panel.
 
-The _Create new view_ page opens.
+    Notice that section **Unsaved View**.
 
-Enter a name. For example: Marisa First View
+    ![image19](images/logdna_img19.png)
 
-Add a **Category**.
+6. Click **Unsaved View**.
 
-Enter a category name in the **Uncategorized** field. For example: Category1
+    ![image20](images/logdna_img20.png)
 
-Click **Add this as a new view category**.
+7. Select **Save as new view /alert**.
 
-Click **Save View**.
+    The _Create new view_ page opens.
 
-Notice how the UI changes to reflect this new view and category.
+    ![image21](images/logdna_img21.png)
+
+8. Enter a name. For example: Marisa First View
+
+9. Add a **Category**.
+
+    Enter a category name in the **Uncategorized** field. For example: Category1
+
+    ![image22](images/logdna_img22.png)
+    
+    Click **Add this as a new view category**.
+
+    ![image23](images/logdna_img23.png)
+
+10. Click **Save View**.
+
+    Notice how the UI changes to reflect this new view and category.
+
+    ![image24](images/logdna_img24.png)
+
