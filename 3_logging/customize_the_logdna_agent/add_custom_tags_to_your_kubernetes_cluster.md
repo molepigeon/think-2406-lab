@@ -86,3 +86,4 @@ Complete the following steps to add tags:
     Get one of the latest records, and expand it. You should see the new tags attached to the log record.
 
     ![image41](../images/logdna_img41.png)
+    

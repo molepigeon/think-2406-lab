@@ -20,3 +20,4 @@ Tags are available in the _Views_ tab of the LOgDNA web UI. In the section **All
 Tags are also associated with a log record. If you look in detail to a log record in a view, you can see the **Tags** section where the default tags and custom tags will display:
 
 ![image38](../images/logdna_img38.png)
+
