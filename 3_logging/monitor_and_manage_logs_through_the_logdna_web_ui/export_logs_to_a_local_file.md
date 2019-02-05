@@ -1,4 +1,4 @@
-## Export logs to a local file {#export-logs-to-a-local-file}
+## [Optional] Export logs to a local file {#export-logs-to-a-local-file}
 
 **NOTE: To complete this step you need a paid plan. Upgrade the service plan.**
 

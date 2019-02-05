@@ -1,4 +1,4 @@
-## Configure an email alert {#configure-an-email-alert}
+## [Optional] Configure an email alert {#configure-an-email-alert}
 
 **NOTE: To complete this step you need a paid plan. Upgrade the service plan.**
 
