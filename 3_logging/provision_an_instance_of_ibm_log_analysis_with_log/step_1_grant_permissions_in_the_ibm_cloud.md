@@ -32,7 +32,7 @@ Complete the following steps to assign a user administrator role to the IBM Log 
 
     e.  Select the role. Choose Administrator.
 
-![image4](../images/logdna_img4.png)
+![](../images/logdna_img4.png)
 
     f.  Click **Assign**.
 
