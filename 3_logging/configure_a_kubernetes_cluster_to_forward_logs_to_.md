@@ -38,17 +38,17 @@ Open a terminal in your local environment and complete the following steps to co
     ibmcloud ks cluster-config CLUSTERNAME
     ```
 
-    When the download of the configuration file is finished, a command is displayed.   </br>
+    When the download of the configuration file is finished, a command is displayed.   
 
-    **Note:** Every time you log in to the IBM Cloud Kubernetes Service CLI to work with clusters, you must run these commands to set the path to the cluster&#039;s configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud. </br>
+    **Note:** Every time you log in to the IBM Cloud Kubernetes Service CLI to work with clusters, you must run these commands to set the path to the cluster&#039;s configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud. 
 
 6. Deploy the LogDNA agent. From the _Observability_ dashboard, select **Edit sources**.
 
-    ![image13](../images/logdna_img13.png)
+    ![image13](images/logdna_img13.png)
 
     The _Add agents to desired log sources_ window opens:
 
-    ![image14](../images/logdna_img14.png)
+    ![image14](images/logdna_img14.png)
 
     Select **Kubernetes**.
 
