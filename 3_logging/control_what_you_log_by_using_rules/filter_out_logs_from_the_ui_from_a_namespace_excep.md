@@ -6,12 +6,24 @@ In this step, you will learn how to exclude data from the namespace ibm-observe 
 
 Complete the following steps:
 
-1.  Select the settings icon .
-2.  Select **USAGE**.
+1. Select the settings icon ![image52](../images/logdna_img52.png).
 
-The _Manage Usage_ page opens.
+2. Select **USAGE**.
 
-1.  In the **Exclusion Rules** section, select **Add rule**.
-2.  Enter the following query in the **Query** field:
+    ![image53](../images/logdna_img53.png)
 
-Namespace:ibm-observe -level:error
+    The _Manage Usage_ page opens.
+
+    ![image58](../images/logdna_img58.png)
+
+3. In the **Exclusion Rules** section, select **Add rule**.
+
+    ![image5](../images/logdna_img59.png)
+
+4. Enter the following query in the **Query** field:
+
+    ```
+    Namespace:ibm-observe -level:error
+    ```
+
+    ![image60](../images/logdna_img60.png)
