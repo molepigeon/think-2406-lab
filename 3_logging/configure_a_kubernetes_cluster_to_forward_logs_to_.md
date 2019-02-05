@@ -34,9 +34,9 @@ Open a terminal in your local environment and complete the following steps to co
     
     a.  Get the command to set the environment variable and download the Kubernetes configuration files. Run the following command. When the download of the configuration file is finished, a command is displayed.
 
-    ```
-    ibmcloud ks cluster-config CLUSTERNAME
-    ```
+        ```
+        ibmcloud ks cluster-config CLUSTERNAME
+        ```
 
     b.  Copy and paste that command in your terminal to set the KUBECONFIG environment variable.
 
@@ -46,19 +46,19 @@ Open a terminal in your local environment and complete the following steps to co
     
     a.  From the _Observability_ dashboard, select **Edit sources**.
 
-    ![image13](../images/logdna_img13.png)
+        ![image13](../images/logdna_img13.png)
 
-    The _Add agents to desired log sources_ window opens:
+        The _Add agents to desired log sources_ window opens:
 
-    ![image14](../images/logdna_img14.png)
+        ![image14](../images/logdna_img14.png)
 
     b.  Select **Kubernetes**.
 
     c.  Copy the first command and run it in your terminal. In this step, you create a Kubernetes secret to store your logDNA ingestion key for your service instance. The LogDNA ingestion key is used to open a secure web socket to the logDNA ingestion server and to authenticate the logging agent with the logging service. The command looks as follows:
 
-    ```
-    kubectl create secret generic logdna-agent-key --from-literal=logdna-agent-key=<logDNA_ingestion_key>
-    ```
+        ```
+        kubectl create secret generic logdna-agent-key --from-literal=logdna-agent-key=<logDNA_ingestion_key>
+        ```
 
     d.  Copy the second command and run it in your termina. In this step, you create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
 
