@@ -57,7 +57,7 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
     spec:
         repositories:
         - name: registry.ng.bluemix.net/my_namespace/hello-world
-        policy:
+          policy:
             trust:
                 enabled: false
             va:
@@ -75,15 +75,15 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 
 1. Make sure that the `mypod` is gone from your cluster.
 
+    `kubectl delete --ignore-not-found pod mypod`
+
 2. Try to create the `mypod` pod.
 
     `kubectl apply -f mypod.yaml`
 
     The deployment is not allowed because of the vulnerabilities in the image.
 
-    ```text
-    admission webhook "va.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: The Vulnerability Advisor image scan assessment found issues with the container image that are not exempted. Refer to your image vulnerability report for more details by using the command `ibmcloud cr va`.
-    ```
+    ``admission webhook "va.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: The Vulnerability Advisor image scan assessment found issues with the container image that are not exempted. Refer to your image vulnerability report for more details by using the command `ibmcloud cr va`.``
 
 3. Edit the pod definition to use the image without vulnerabilities. Change the image tag from `3.6` to `latest`.
 
