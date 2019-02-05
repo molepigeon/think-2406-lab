@@ -10,7 +10,7 @@ IBM Log Analysis with LogDNA offers administrators, DevOps teams, and developers
 
 The following figure shows the components overview for the IBM Log Analysis with LogDNA service that is running on IBM Cloud:
 
-![Components overview of IBM Log Analysis with LogDNA](logging_ov.png)
+![Components overview of IBM Log Analysis with LogDNA](images/logging_ov.png)
 
 ## Features
 
