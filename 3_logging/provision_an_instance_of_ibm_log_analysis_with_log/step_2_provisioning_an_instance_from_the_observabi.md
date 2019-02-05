@@ -10,19 +10,19 @@ To provision an instance of IBM Log Analysis with LogDNA by using the IBM Cloud 
 
 2.  Click the Navigation Menu.
 
-![image7](../images/logdna_img7.png)
+    ![image7](../images/logdna_img7.png)
 
 3.  Select Observability.
 
-![image8](../images/logdna_img8.png)
+    ![image8](../images/logdna_img8.png)
 
 4.  Click **Create logging instance**.
 
-![image9](../images/logdna_img9.png)
+    ![image9](../images/logdna_img9.png)
 
 5.  Enter a name for the service instance. For example, _logdna-marisa_
 
-![image10](../images/logdna_img10.png)
+    ![image10](../images/logdna_img10.png)
 
 6.  Select the **DevOps** resource group.
 
@@ -34,7 +34,7 @@ To provision an instance of IBM Log Analysis with LogDNA by using the IBM Cloud 
 
     By default, the **Lite** plan is set.
 
-![image11](../images/logdna_img11.png)
+    ![image11](../images/logdna_img11.png)
 
 8.  Click **Create**.
 
