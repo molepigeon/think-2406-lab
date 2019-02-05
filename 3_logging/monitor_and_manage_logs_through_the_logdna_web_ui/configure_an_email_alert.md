@@ -49,9 +49,9 @@ Complete the following steps to configure an alert:
 
     ![image33](../images/logdna_img33.png)
 
-    * Change the rule to say: **When 100 or more matches appear within 30 seconds**
+    Change the rule to say: **When 100 or more matches appear within 30 seconds**
 
-    * Select **Add recipient emails**. Enter your email.
+    Select **Add recipient emails**. Enter your email.
 
     ![image34](../images/logdna_img34.png)
 
