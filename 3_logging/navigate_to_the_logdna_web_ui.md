@@ -23,7 +23,3 @@ Complete the following steps to launch the web UI:
 The **LogDNA web UI** opens.
 
 ![image15](images/logdna_img15.png)
-
-
-
-

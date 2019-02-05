@@ -1,6 +1,6 @@
 ## Configure an email alert {#configure-an-email-alert}
 
-**NOTE:** To complete this step you need a paid plan.
+**NOTE: To complete this step you need a paid plan. Upgrade the service plan.**
 
 You can attach one or more alerts to a view. You can define multiple notification channels for an alert. You can mute alerts. You can detach alerts from a view.
 
@@ -23,25 +23,44 @@ Notice that when you attach an alert to a view, a bell icon is displayed with th
 
 Complete the following steps to configure an alert:
 
-From the Views section, select the view you created in the precious step.
+1. From the Views section, select the view you created in the precious step.
 
-Select **Attach an alert**.
+2. Select **Attach an alert**.
 
-The alert wizard page opens.
+    ![image28](../images/logdna_img28.png)
 
-Click **Select an option**.
+    The alert wizard page opens.
 
-Click **View-specific alert**.
+    ![image29](../images/logdna_img29.png)
 
-Select **email**.
+3. Click **Select an option**.
 
-Configure the notification channel details.
+    ![image30](../images/logdna_img30.png)
 
-*   Change the rule to say: **When 100 or more matches appear within 30 seconds**
-*   Select **Add recipient emails**. Enter your email.
+4. Click **View-specific alert**.
 
-Click **Test.** You will receive an email with information about the alert.
+    ![image31](../images/logdna_img31.png)
 
-Click **Save Alert**.
+5. Select **email**.
 
-Notice the bell icon by the view to indicate that it has alert defined.
+    ![image32](../images/logdna_img32.png)
+
+6. Configure the notification channel details.
+
+    ![image33](../images/logdna_img33.png)
+
+    * Change the rule to say: **When 100 or more matches appear within 30 seconds**
+
+    * Select **Add recipient emails**. Enter your email.
+
+    ![image34](../images/logdna_img34.png)
+
+7. Click **Test.** You will receive an email with information about the alert.
+
+    ![image35](../images/logdna_img35.png)
+
+8. Click **Save Alert**.
+
+    Notice the bell icon by the view to indicate that it has alert defined.
+
+    ![image36](../images/logdna_img36.png)
