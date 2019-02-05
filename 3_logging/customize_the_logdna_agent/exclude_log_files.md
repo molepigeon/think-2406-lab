@@ -26,7 +26,7 @@ Complete the following steps to exclude log files:
 
     To exclude all non- container logs, that is to exclude files as shown in the All Apps filter view, enter:
 
-    ![image42](images/logdna_img42.png)
+    ![image42](../images/logdna_img42.png)
 
     ```
     - name: LOGDNA_EXCLUDE
@@ -82,7 +82,7 @@ Complete the following steps to exclude log files:
               value: /var/log/containers/calico-node*
     ```
     
-    ![image43](images/logdna_img43.png)
+    ![image43](../images/logdna_img43.png)
 
 
 3. Apply the configuration changes. Run the following command:
@@ -97,7 +97,7 @@ Complete the following steps to exclude log files:
     kubectl get pods
     ```
 
-    ![image44](images/logdna_img44.png)
+    ![image44](../images/logdna_img44.png)
 
 5. Delete all the logdna pods that are listed in the previous step.
 
