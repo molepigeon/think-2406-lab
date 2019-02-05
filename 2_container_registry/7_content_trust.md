@@ -128,7 +128,7 @@ CISE does trust by mutating the pod spec yadda yadda yadda.
 
 You have signed your image and configured Container Image Security Enforcement to require image signatures. You have seen that when it enforces content trust, Container Image Security Enforcement modifies the image name to the digest of the signed image.
 
-## Further Reading
+## Further reading
 
 **TODO**
 

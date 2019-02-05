@@ -149,7 +149,7 @@ You have created an Image Pull Secret for your IAM Service ID and used it to cre
 
 You can have multiple Image Pull Secrets in your cluster for the same registry. This allows you to finely control what images a given Kubernetes resource can access.
 
-## Further Reading
+## Further reading
 
 **TODO**
 

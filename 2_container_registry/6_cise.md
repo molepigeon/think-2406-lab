@@ -103,7 +103,7 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 
 You have installed Container Image Security Enforcement and configured it to block deployment of images that have vulnerabilities in Vulnerability Advisor.
 
-## Further Reading
+## Further reading
 
 **TODO**
 

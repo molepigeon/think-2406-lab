@@ -114,6 +114,6 @@ You have created a signing key and configured Container Image Security Enforceme
 
 That concludes the IBM Cloud Container Registry part of this tutorial.
 
-## Further Reading
+## Further reading
 
 **TODO**

@@ -99,7 +99,7 @@ Because the domain name of the registry is in the image name, to upload an image
 
 You have set up an IBM Cloud Container Registry namespace in your account, built an image, and pushed your image into your namespace.
 
-## Further Reading
+## Further reading
 
 **TODO**
 
