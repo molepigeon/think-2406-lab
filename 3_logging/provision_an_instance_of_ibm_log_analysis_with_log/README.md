@@ -19,5 +19,7 @@ To provision an instance, your user IBM ID needs 2 different permissions:
 
 ![](../images/logdna_img1.png)
 
-![](../images/logdna_img2.png)
+The following table shows the IBM Cloud platform roles that are required to perform the actions outlined:
+
+![Platform actions and roles](../images/logdna_img2.png)
 
