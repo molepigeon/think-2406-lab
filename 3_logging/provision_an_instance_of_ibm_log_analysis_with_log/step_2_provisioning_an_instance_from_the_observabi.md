@@ -22,7 +22,7 @@ To provision an instance of IBM Log Analysis with LogDNA by using the IBM Cloud 
 
 5.  Enter a name for the service instance. For example, _logdna-marisa_
 
-    ![image10](../images/logdna_img10.png =250x)
+    ![image10](../images/logdna_img10.png)
 
 6.  Select the **DevOps** resource group.
 
