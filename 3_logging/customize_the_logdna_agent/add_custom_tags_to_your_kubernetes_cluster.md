@@ -12,8 +12,7 @@ Complete the following steps to add tags:
 
     ```
     - name: LOGDNA_TAGS
-
-    value: tag1,tag2,tag3
+      value: tag1,tag2,tag3
     ```
 
     For example, the following section shows where to add tags in the configuration file:
@@ -49,7 +48,7 @@ Complete the following steps to add tags:
               value: tag1,tag2,tag3
     ```
 
-    ![image39](images/logdna_img39.png)
+    ![image39](../images/logdna_img39.png)
 
 3. Apply the configuration changes. Run the following command:
 
@@ -65,7 +64,7 @@ Complete the following steps to add tags:
     kubectl get pods
     ```
 
-    ![image40](images/logdna_img40.png)
+    ![image40](../images/logdna_img40.png)
 
 5. Delete all the logdna pods that are listed in the previous step.
 
@@ -86,4 +85,4 @@ Complete the following steps to add tags:
 
     Get one of the latest records, and expand it. You should see the new tags attached to the log record.
 
-    ![image41](images/logdna_img41.png)
+    ![image41](../images/logdna_img41.png)
