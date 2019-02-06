@@ -70,25 +70,17 @@ Let's prove that we can't pull images using the Service ID.
 
 Now let's create an IAM policy to allow your Service ID to access your namespace.
 
-1. Make sure that you are targeting the correct IBM Cloud account.
-
-    `ibmcloud target`
-
-2. Make sure that you are targeting the US South instance of IBM Cloud Container Registry.
-
-    `ibmcloud cr region-set us-south`
-
-3. Create an IAM policy to grant Reader role on your namespace to the service ID.
+1. Create an IAM policy to grant Reader role on your namespace to the service ID.
 
     `ibmcloud iam service-policy-create think-registry-demo --roles Reader --service-name container-registry --region us-south --resource-type namespace --resource my_namespace`
 
-4. Try your image pull again.
+2. Try your image pull again.
 
     `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
 
     The pull works because your IAM policy allows the Service ID to access the image.
 
-5. Try to push the image back to the registry.
+3. Try to push the image back to the registry.
 
     `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
 
