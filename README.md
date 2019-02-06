@@ -28,7 +28,7 @@ The session is comprised of a number of exercises focused around each of the ser
 
 ## Help
 
-If you're completing the steps for this tutorial in the scheduled slot at the Think 2019 onference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
+If you're completing the steps for this tutorial in the scheduled slot at the Think 2019 conference, feel free to ask any of the IBMers for assistance or for more information about a particular section.
 
 If you're completing the steps at the conference, but outside the slot, the friendly faces at the IBM Cloud booth or the open lab classroom have contact information for the speakers and can pass on your questions.
 
