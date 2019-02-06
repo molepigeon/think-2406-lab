@@ -9,15 +9,16 @@ The HTTP request count metric counts the number of HTTP requests.
 ### 1. View the HTTP request count metric{#1}
 
 Complete the following steps in the *Explore* tab:
-1. Select **Deployment and Pods**.
-2. Select the namespace **ticket-generator**.
-3. Select the dashboard or metric that displays in your UI. In this figure, it is HTTP.
 
-    ![](../images/sysdig_img42.png)
+Select **Deployment and Pods**.
 
-4. Select **Metrics.**
-5. Select **Network**.
-6. Select **net.http.request.count**.
+Select the namespace **ticket-generator**.
+
+Click ![](../images/sysdig_img33a.png).
+
+Select **Metrics** &gt; **Network** &gt; **net.http.request.count**
+
+![](../images/sysdig_img42.png)
 
 The metric panel shows.
 
