@@ -26,7 +26,7 @@ An IAM Service ID is a special user that can access IBM Cloud APIs, but cannot l
 
 4. Create an API key for your new Service ID called `think-registry-demo-key`.
 
-    `ibmcloud iam service-api-key-create think-registry-demo-key think-registry-demo
+    `ibmcloud iam service-api-key-create think-registry-demo-key think-registry-demo`
 
 ## Enabling IAM policy enforcement for IBM Cloud Container Registry
 
