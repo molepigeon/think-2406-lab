@@ -70,7 +70,7 @@ The token in the default secret has access to pull images that are owned by the 
 
 1. Create an Image Pull Secret called `think-registry-demo` for your Service ID. Replace `<apikey>` with your Service ID API key.
 
-    Note that the `docker-server` value includes your Registry namespace. Because the secret is configured in this way, Kubernetes will only use this Image Pull Secret for images in your namespace, and it will use the default secret for other images.
+    Note that the `docker-server` value includes `my_namespace`. Don't forget to replace this with your namespace. Because the server value includes your namespace, Kubernetes will only use this Image Pull Secret for images in your namespace, and it will use the default secret for other images from IBM Cloud Container Registry.
 
     `kubectl create secret docker-registry think-registry-demo --docker-server registry.ng.bluemix.net/my_namespace --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com`
 
