@@ -34,37 +34,39 @@ ibmcloud login -a api.ng.bluemix.net
     ibmcloud ks region-set us-south
     ```
 
-4. Set up the cluster environment. Run the following command. Then, copy and paste that command in your terminal to set the KUBECONFIG environment variable.
-    
-    Get the command to set the environment variable and download the Kubernetes configuration files. 
+4. Get the command to set the environment variable and download the Kubernetes configuration files. 
 
     ```
     ibmcloud ks cluster-config CLUSTERNAME
     ```
+    When the download of the configuration file is finished, a command is displayed.  
 
-    When the download of the configuration file is finished, a command is displayed.   
+5. Copy and paste that command in your terminal to set the KUBECONFIG environment variable.
+
 
 **Note:** Every time you log in to the IBM Cloud Kubernetes Service CLI to work with clusters, you must run these commands to set the path to the cluster&#039;s configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud. 
 
 ### 3. Deploy the LogDNA agent{#3}
 
-1. From the _Observability_ dashboard, select **Edit sources**.
+From the _Observability_ dashboard, select **Edit sources**.
 
-    ![image13](images/logdna_img13.png)
+![image13](images/logdna_img13.png)
 
-    The _Add agents to desired log sources_ window opens:
+The _Add agents to desired log sources_ window opens:
 
-    ![image13a](images/logdna_img13a.png)
+![image13a](images/logdna_img13a.png)
 
-2. Select **Kubernetes**.
+Complete the following steps to deploy the logdna agent for Kubernetes:
 
-3. Copy the first command and run it in your terminal. In this step, you create a Kubernetes secret to store your logDNA ingestion key for your service instance. The LogDNA ingestion key is used to open a secure web socket to the logDNA ingestion server and to authenticate the logging agent with the logging service. The command looks as follows:
+1. Select **Kubernetes**.
+
+2. Copy the first command and run it in your terminal. In this step, you create a Kubernetes secret to store your logDNA ingestion key for your service instance. The LogDNA ingestion key is used to open a secure web socket to the logDNA ingestion server and to authenticate the logging agent with the logging service. The command looks as follows:
 
     ```
     kubectl create secret generic logdna-agent-key --from-literal=logdna-agent-key=<logDNA_ingestion_key>
     ```
 
-4. Copy the second command and run it in your terminal to create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
+3. Copy the second command and run it in your terminal to create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
 
     ```
     kubectl create -f https://repo.logdna.com/ibm/prod/logdna-agent-ds-us-south.yaml
