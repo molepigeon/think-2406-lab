@@ -59,4 +59,4 @@ Expand **ticket-generator** and double click it to enlarge it:
 
 ![](../images/sysdig_img50.png)
 
-You can see the value of HTTP requests per container ID and how their communication pattern.
+You can see the value of HTTP requests per container ID and their communication pattern.
