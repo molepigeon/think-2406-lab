@@ -76,7 +76,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 4. Try to create the `mypod` pod.
 
-    `kubectl apply -f mypod.yaml`
+    `kubectl apply -f ~/mypod.yaml`
 
     The deployment is not allowed because the image is not signed.
 
