@@ -1,0 +1,4 @@
+FROM molepigeon/alpine:vulnerable
+ADD https://raw.githubusercontent.com/molepigeon/think-2406-lab/master/hello-world-app/hello-world /hello-world
+RUN chmod +x /hello-world
+CMD ["/hello-world"]

@@ -50,3 +50,5 @@ The estimated time to complete this part of the lab is 1 hour.
 ## Further reading
 
 [IBM Cloud Container Registry product page](https://icr.io)
+
+[About IBM Cloud Container Registry (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_overview.html#registry_overview)

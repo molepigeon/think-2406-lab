@@ -56,17 +56,16 @@ Because the domain name of the registry is in the image name, to upload an image
 4. Copy the following instructions into the Dockerfile, then save the file and exit the editor.
 
     ```Dockerfile
-    FROM gliderlabs/alpine:3.6
-    ADD github.com/molepigeon/helloworld .
+    FROM molepigeon/alpine:3.6
+    ADD https://raw.githubusercontent.com/molepigeon/think-2406-lab/master/hello-world-app/hello-world /hello-world
+    RUN chmod +x /hello-world
     EXPOSE 8080
-    CMD helloworld
+    CMD ["/hello-world"]
     ```
-
-    **TODO** Create the helloworld binary and fix the URL in the Dockerfile
 
     Let's explore this Dockerfile a bit.
 
-    * The `FROM` instruction is an image that exists in a registry already that is used as a starting point for our image.
+    * The `FROM` instruction is an image that exists in a registry already that is used as a starting point for our image. This particular image is a copy of Alpine Linux.
     * The `ADD` instruction adds files to the image from either the filesystem or, as in this case, a web address for a Hello World web application.
     * The `EXPOSE` instruction tells the container runtime to expect that this container will be running a server on the given port, in this case 8080.
     * The `CMD` instruction defines the command to be executed when a container is started from this image.
@@ -101,7 +100,11 @@ You have set up an IBM Cloud Container Registry namespace in your account, built
 
 ## Further reading
 
-**TODO**
+[IBM Cloud Container Registry product page](https://icr.io)
+
+[Planning Namespaces (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_overview.html#registry_namespaces)
+
+[Adding images to your namespace (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_images_.html#registry_images_)
 
 ## Next
 
