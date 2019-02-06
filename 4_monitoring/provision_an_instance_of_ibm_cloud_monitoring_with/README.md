@@ -25,7 +25,7 @@ To provision an instance, your user ID needs 2 different permissions:
     * For example, you must have a policy for the service IBM Cloud Monitoring with Sysdig with one of the following platform roles: administrator, editor
 
 
-![](images/sysdig_img1.png)
+![](../images/sysdig_img1.png)
 
 
 The following table shows the IBM Cloud platform roles that are required to perform the actions outlined:

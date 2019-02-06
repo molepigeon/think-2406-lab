@@ -40,7 +40,7 @@ From the access group dashboard, complete the following steps:
 
 5. Select the role. Choose **Administrator**.
 
-    ![](../images/logdna_img5.png)
+    ![](../images/sysdig_img5.png)
 
 6. Click **Assign**.
 

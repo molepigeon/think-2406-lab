@@ -28,7 +28,7 @@ From the Observability page, click **Create monitoring instance**.
 
 ![](../images/sysdig_img10.png)
 
-Enter a name for the service instance. For example, _logdna-marisa_
+Enter a name for the service instance. For example, _sysdig-marisa_
 
 ![](../images/sysdig_img11.png)
 
