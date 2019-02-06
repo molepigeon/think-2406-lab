@@ -5,7 +5,7 @@
 Complete the following steps to assign a user administrator role to the IBM Cloud Monitoring with Sysdig service:
 
 
-### 1. Create the access group **logdna-admins**{#1}
+### 1. Create the access group **sysdig-admins**{#1}
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**.
 
