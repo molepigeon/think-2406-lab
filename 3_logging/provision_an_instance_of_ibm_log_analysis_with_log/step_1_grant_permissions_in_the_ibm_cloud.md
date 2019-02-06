@@ -73,5 +73,3 @@ From the access group dashboard, complete the following steps:
 2. Choose your IBM ID.
 
 3. Click **Add to group**.
-
-
