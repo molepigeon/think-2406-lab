@@ -22,27 +22,27 @@ After you log in with your user ID and password, the IBM Cloud UI opens.
 
 ### 3. Create a logging instance{#3}
 
-1. From the Observability page, click **Create logging instance**.
+From the Observability page, click **Create logging instance**.
 
 ![](../images/logdna_img9.png)
 
-2. Enter a name for the service instance. For example, _logdna-marisa_
+Enter a name for the service instance. For example, _logdna-marisa_
 
 ![](../images/logdna_img10.png)
 
-3. Select the **DevOps** resource group.
+Select a resource group. For example, select the **Default** resource group or a different one. In the sample images you can see that the DevOps resource group is selected.
 
-    By default, the **Default** resource group is set.
+* By default, the **Default** resource group is set.
 
-    **Note:** If you are not able to select a resource group, check that you have editing permissions on the resource group where you want to provision the instance.
+**Note:** If you are not able to select a resource group, check that you have editing permissions on the resource group where you want to provision the instance.
 
-4. Select the **Lite** service plan. 
+Select the **Lite** service plan. 
 
-    By default, the **Lite** plan is set.
+* By default, the **Lite** plan is set.
 
 ![](../images/logdna_img11.png)
 
-8.  Click **Create**.
+Click **Create**.
 
 After you provision an instance, the _Observability_ dashboard opens.
 
