@@ -10,7 +10,7 @@ Look at the **HTTP Dashboard**.
 
 4. Select **Default Dashboards** &gt; **Applications**.
 
-4. Select **HTTP**.
+5. Select **HTTP**.
 
 ![](../images/sysdig_img52.png)
 

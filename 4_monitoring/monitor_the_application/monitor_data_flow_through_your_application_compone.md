@@ -2,12 +2,21 @@
 
 You can use the **Connection Table** dashboard to monitor how data flows between your application components.
 
-1.  From the _Explore_ tab, select **Deployments and Pods.**
-2.  Select **ticket-generator.**
-3.  Click . Select **Default** **Dashboards**. Then, select **Network**.
-4.  Select **Connections Table.**
+1. From the _Explore_ tab, select **Deployments and Pods.**
+
+2. Select the namespace **ticket-generator.**
+
+3. Click ![](../images/sysdig_img33a.png).
+
+4. Select **Default Dashboards** &gt; **Network**.
+
+5. Select **Connections Table**.
+
+![](../images/sysdig_img71.png)
 
 The dashboard opens. Look at the different columns and the data.
+
+![](../images/sysdig_img72.png)
 
 You can see the different processes inside the pods:
 
