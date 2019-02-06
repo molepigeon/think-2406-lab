@@ -16,6 +16,8 @@ When you define an alert, you must define the condition that triggers the notifi
 
 You can define alerts for any of the following alert types:
 
+![](../images/sysdig_img75.png)
+
 By default, severity is set to _warning_. You can set the severity of an alert to any of the following values: _emergency_, _alert_, _critical_, _error_, _warning_, _notice_, _informational_, debug
 
 You can define one or more notification channels for any of the following notification integrations:
