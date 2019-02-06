@@ -80,7 +80,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
     The deployment is not allowed because the image is not signed.
 
-    `admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: Deny, failed to get content trust information: No valid trust data for latest`
+    `admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: Deny, failed to get content trust information: registry.ng.bluemix.net:4443 does not have trust data for latest`
 
 5. Edit the pod definition to use the signed image. Change the image repository from `my_namespace/hello-world` to `my_namespace/signed`.
 
