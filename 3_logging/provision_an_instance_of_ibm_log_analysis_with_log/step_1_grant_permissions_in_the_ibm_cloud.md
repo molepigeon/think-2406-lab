@@ -54,7 +54,7 @@ Complete the following steps to assign a user administrator role to the IBM Log 
 
     g.  Select **manager** role for the service role.
 
-    ![image6](../images/logdna_img6.png)
+![image6](../images/logdna_img6.png)
 
     h.  Click **Assign**.
 
