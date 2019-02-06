@@ -74,6 +74,8 @@ Now let's create an IAM policy to allow your Service ID to access your namespace
 
     `ibmcloud iam service-policy-create think-registry-demo --roles Reader --service-name container-registry --region us-south --resource-type namespace --resource my_namespace`
 
+    **Hint**: Don't forget to replace `my_namespace` with your chosen namespace name.
+
 2. Try your image pull again.
 
     `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
