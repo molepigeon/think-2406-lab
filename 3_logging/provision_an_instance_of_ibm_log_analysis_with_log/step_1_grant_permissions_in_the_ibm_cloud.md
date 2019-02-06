@@ -4,7 +4,7 @@
 
 Complete the following steps to assign a user administrator role to the IBM Log Analysis with LogDNA service within the context of a resource group:
 
-### Create an access group **logdna-admins**.
+### 1. Create the access group **logdna-admins**.{#1}
 
 1. From the menu bar, click **Manage** &gt; **Access (IAM)**.
 
@@ -18,25 +18,25 @@ Complete the following steps to assign a user administrator role to the IBM Log 
 
     d. [Optional] Enter a description.
 
-2. Add an access policy for the resource group where you are going to provision the IBM Log Analysis with LogDNA service. In the lab, you can use DevOps or use default, if you prefer.
+### 2. Add an access policy for the resource group where you are going to provision the IBM Log Analysis with LogDNA service. In the lab, you can use DevOps or use default, if you prefer.{#2}
 
-    a. Click **Access Policies**.
+1. Click **Access Policies**.
 
-    b. Click **Assign Access**.
+2. Click **Assign Access**.
 
-    c. Select **Assign Access within a Resource Group**.
+3. Select **Assign Access within a Resource Group**.
 
     ![](../images/logdna_img3.png)
 
-    d. Select the name of the resource group. Choose DevOps.
+4. Select the name of the resource group. Choose DevOps.
 
-    e. Select the role. Choose Administrator.
+5. Select the role. Choose Administrator.
 
-    f. Click **Assign**.
+6. Click **Assign**.
 
 ![](../images/logdna_img4.png)
 
-3. Add an access policy to work with the IBM Log Analysis with LogDNA service.
+### 3. Add an access policy to work with the IBM Log Analysis with LogDNA service.{#3}
 
     a. Click **Access Policies**.
 
