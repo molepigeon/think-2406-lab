@@ -24,11 +24,11 @@ After you log in with your user ID and password, the IBM Cloud UI opens.
 
 1. From the Observability page, click **Create logging instance**.
 
-    ![](../images/logdna_img9.png)
+![](../images/logdna_img9.png)
 
 2. Enter a name for the service instance. For example, _logdna-marisa_
 
-    ![](../images/logdna_img10.png)
+![](../images/logdna_img10.png)
 
 3. Select the **DevOps** resource group.
 
@@ -40,7 +40,7 @@ After you log in with your user ID and password, the IBM Cloud UI opens.
 
     By default, the **Lite** plan is set.
 
-    ![](../images/logdna_img11.png)
+![](../images/logdna_img11.png)
 
 8.  Click **Create**.
 
