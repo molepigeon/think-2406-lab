@@ -16,7 +16,7 @@
   * [Stretch goal: Trust pinning](2_container_registry/8_trust_pinning.md)
 * [Part 2: Cluster-level logging by using IBM Log Analysis with LogDNA](3_logging/1_logging.md)
   * [Provision an instance of IBM Log Analysis with LogDNA](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/README.md)
-    * [Step 1: Grant permissions in the IBM Cloud](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/step_1_grant_permissions_in_the_ibm_cloud.md)
+    * [Step 1: Grant permissions to your user ID in the IBM Cloud to work with the IBM Log Analysis with LogDNA service](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/step_1_grant_permissions_in_the_ibm_cloud.md)
     * [Step 2: Provisioning an instance from the Observability dashboard](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/step_2_provisioning_an_instance_from_the_observabi.md)
   * [Configure a Kubernetes cluster to forward logs to your logging instance](3_logging/configure_a_kubernetes_cluster_to_forward_logs_to_.md)
   * [Navigate to the LogDNA web UI ](3_logging/navigate_to_the_logdna_web_ui.md)
