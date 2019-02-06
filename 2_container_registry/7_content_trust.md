@@ -36,7 +36,9 @@ When you enable Content Trust, Docker pushes trust information into IBM Cloud Co
 
     `docker push registry.ng.bluemix.net/my_namespace/signed:latest`
 
-6. You can check your image signature by using `registry.ng.bluemix.net/my_namespace/signed:latest`.
+6. Check your image signature.
+
+    `docker trust inspect --pretty registry.ng.bluemix.net/my_namespace/signed:latest`
 
 ## Enforcing content trust by using Container Image Security Enforcement
 
