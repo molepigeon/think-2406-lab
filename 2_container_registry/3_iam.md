@@ -64,7 +64,7 @@ Let's prove that we can't pull images using the Service ID.
 
     The pull fails with an error message:
 
-    `You do not have access to the specified resource.`
+    `Error response from daemon: pull access denied for ...`
 
     **Hint**: Don't forget to replace `my_namespace` with your chosen namespace name.
 
