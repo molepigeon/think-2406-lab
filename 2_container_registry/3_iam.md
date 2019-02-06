@@ -88,6 +88,16 @@ Now let's create an IAM policy to allow your Service ID to access your namespace
 
     The push is not allowed because your Service ID does not have Writer access to IBM Cloud Container Registry.
 
+    ```example
+    The push refers to repository [registry.ng.bluemix.net/my_namespace/hello-world]
+    aba2478e24ae: Layer already exists
+    01b17e92d16a: Layer already exists
+    5bef08742407: Layer already exists
+    errors:
+    denied: requested access to the resource is denied
+    unauthorized: authentication required
+    ```
+
 ## Recap
 
 You have created an IBM Cloud IAM Service ID and granted it reader access to your IBM Cloud Container Registry namespace. The Service ID can pull images in your namespace, but it cannot push images or access resources in any other IBM Cloud Container Registry regions, or other IBM Cloud services.
