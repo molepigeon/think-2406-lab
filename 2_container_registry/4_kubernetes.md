@@ -104,7 +104,7 @@ The token in the default secret has access to pull images that are owned by the 
     apiVersion: v1
     kind: Pod
     metadata:
-    name: mypod
+        name: mypod
     labels:
         name: mypod
     spec:
