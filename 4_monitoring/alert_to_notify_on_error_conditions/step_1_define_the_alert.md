@@ -74,11 +74,15 @@ Set the trigger condition as shown in the image:
 
 ![](../images/sysdig_img88.png)
 
+### 5. Save the alert definition{#5}
+
 The definition section should look like:
 
 ![](../images/sysdig_img89.png)
 
 Click **Save**.
+
+### Check the alert on the dashboard{#6}
 
 You can see the alert defined in the _Alerts_ dashboard.
 
