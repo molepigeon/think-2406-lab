@@ -76,7 +76,7 @@ The token in the default secret has access to pull images that are owned by the 
 
 2. As with the default Image Pull Secrets, you can add your new Image Pull Secret to the default Service Account so that you don't have to manually add the secret to each pod that you run. You can do this interactively or by using `kubectl patch`.
 
-    1. Edit the default Service Account interactively, and add your new secret to the list:
+    1. Option 1: Edit the default Service Account interactively, and add your new secret to the list:
 
         1. Open the default Service Account for editing. The default editor for `kubectl edit` is `vim`.
 
@@ -92,7 +92,7 @@ The token in the default secret has access to pull images that are owned by the 
 
             `Esc, :wq, Enter`
 
-    2. Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
+    2. Option 2: Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
 
         `kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'`
 
