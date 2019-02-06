@@ -36,7 +36,7 @@ From the access group dashboard, complete the following steps:
 
     Note: You can use any other resource group where you have permissions in the account.
 
-5. Select the role. Choose Administrator.
+5. Select the role. Choose **Administrator**.
 
 6. Click **Assign**.
 
