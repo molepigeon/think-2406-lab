@@ -8,9 +8,15 @@ Ticket client -> Load Balancer service -> Load Balancer Pod -> Backend service -
 
 You should be able to see this flow by completing the following steps:
 
-1. In the Explore tab, select the **ticket-generator** namespace.
-2. Click **Overview by Host**. Then, select **Topology**.
-3. Expand Topology, and select **Network Traffic**.
+In the Explore tab, select the **ticket-generator** namespace.
+
+Click ![](../images/sysdig_img33a.png).
+
+Select **Topology**.
+
+![](../images/sysdig_img33b.png)
+
+Expand Topology, and select **Network Traffic**.
 
 ![](../images/sysdig_img34.png)
 
