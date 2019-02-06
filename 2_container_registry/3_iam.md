@@ -84,7 +84,7 @@ Now let's create an IAM policy to allow your Service ID to access your namespace
 
 3. Try to push the image back to the registry.
 
-    `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    `docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6`
 
     The push is not allowed because your Service ID does not have Writer access to IBM Cloud Container Registry.
 
