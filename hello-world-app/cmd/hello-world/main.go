@@ -8,6 +8,7 @@ import (
 	"net/http"
 )
 
+const bindAddress = ":8080"
 const html = `
 <head>
 	<title>
@@ -34,5 +35,6 @@ func favicon(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/favicon.ico", favicon)
+	log.Printf("Start listening on %s", bindAddress)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
