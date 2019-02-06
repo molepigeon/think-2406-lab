@@ -2,44 +2,50 @@
 
 To provision an instance of IBM Log Analysis with LogDNA by using the IBM Cloud UI, complete the following steps:
 
-1.  Log in to your IBM Cloud account.
+### 1.  Log in to your IBM Cloud account{#1}
 
-    The IBM Cloud dashboard can be found at: [https://cloud.ibm.com](https://cloud.ibm.com)
+Log in to your IBM Cloud account
 
-    After you log in with your user ID and password, the IBM Cloud UI opens.
+The IBM Cloud dashboard can be found at: [https://cloud.ibm.com](https://cloud.ibm.com)
 
-2.  Click the Navigation Menu.
+After you log in with your user ID and password, the IBM Cloud UI opens.
 
-    ![image7](../images/logdna_img7.png)
+### 2. Launch the Observability page{#2}
 
-3.  Select Observability.
+1. Click the Navigation Menu.
 
-    ![image8](../images/logdna_img8.png)
+    ![](../images/logdna_img7.png)
 
-4.  Click **Create logging instance**.
+2. Select Observability.
 
-    ![image9](../images/logdna_img9.png)
+    ![](../images/logdna_img8.png)
 
-5.  Enter a name for the service instance. For example, _logdna-marisa_
+### 3. Create a logging instance{#3}
 
-    ![image10](../images/logdna_img10.png)
+1. From the Observability page, click **Create logging instance**.
 
-6.  Select the **DevOps** resource group.
+    ![](../images/logdna_img9.png)
+
+2. Enter a name for the service instance. For example, _logdna-marisa_
+
+    ![](../images/logdna_img10.png)
+
+3. Select the **DevOps** resource group.
 
     By default, the **Default** resource group is set.
 
     **Note:** If you are not able to select a resource group, check that you have editing permissions on the resource group where you want to provision the instance.
 
-7. Select the **Lite** service plan. 
+4. Select the **Lite** service plan. 
 
     By default, the **Lite** plan is set.
 
-    ![image11](../images/logdna_img11.png)
+    ![](../images/logdna_img11.png)
 
 8.  Click **Create**.
 
 After you provision an instance, the _Observability_ dashboard opens.
 
-![image12](../images/logdna_img12.png)
+![](../images/logdna_img12.png)
 
 Next, configure a LogDNA agent. This agent is responsible for collecting and forwarding logs to LogDNA.

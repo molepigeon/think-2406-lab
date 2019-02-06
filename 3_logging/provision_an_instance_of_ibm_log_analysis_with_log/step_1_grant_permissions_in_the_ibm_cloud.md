@@ -1,6 +1,8 @@
-## Step 1: Grant permissions to your user ID in the IBM Cloud to work with the IBM Log Analysis with LogDNA service{#step-1-grant-permissions-in-the-ibm-cloud}
+## Step 1: Grant permissions to your user ID in the IBM Cloud{#step-1-grant-permissions-in-the-ibm-cloud}
 
 **Note:** This step must be completed by the account owner or an administrator of the IBM Log Analysis with LogDNA service on the IBM Cloud in your account.
+
+To provision and manage the IBM Log Analysis with LogDNA service, your user ID must have permissions in the IBM Cloud .
 
 Complete the following steps to assign a user administrator role to the IBM Log Analysis with LogDNA service within the context of a resource group:
 
@@ -58,7 +60,7 @@ From the access group dashboard, complete the following steps:
 
 5. Select **All instances**.
 
-6. Select administrator role for the platform role.
+6. Select **administrator** role for the platform role.
 
 7. Select **manager** role for the service role.
 
@@ -66,7 +68,7 @@ From the access group dashboard, complete the following steps:
 
 ![](../images/logdna_img6.png)
 
-### 4. Grant a user permissions{#4}
+### 4. Grant your user ID permissions{#4}
 
 1. Click **Add users**.
 
