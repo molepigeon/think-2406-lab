@@ -34,7 +34,7 @@ Complete the following steps to assign a user administrator role to the IBM Log 
 
 ![](../images/logdna_img4.png)
 
-    f.  Click **Assign**.
+f.  Click **Assign**.
 
 3.  Add an access policy to work with the IBM Log Analysis with LogDNA service.
 
