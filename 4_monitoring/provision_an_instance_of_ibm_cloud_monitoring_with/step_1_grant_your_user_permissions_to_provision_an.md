@@ -40,10 +40,9 @@ From the access group dashboard, complete the following steps:
 
 5. Select the role. Choose **Administrator**.
 
-    ![](../images/sysdig_img5.png)
-
 6. Click **Assign**.
 
+![](../images/sysdig_img5.png)
 
 
 ### 3. Add an access policy to work with the IBM Cloud Monitoring with Sysdig service{#3}
