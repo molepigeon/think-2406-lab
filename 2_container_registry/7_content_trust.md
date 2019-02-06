@@ -94,6 +94,8 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 6. Try to create the `mypod` pod.
 
+    `kubectl apply -f ~/mypod.yaml`
+
     The pod creation is allowed because the image is signed.
 
 7. Look at the specification for your pod.
@@ -121,6 +123,8 @@ Container Image Security Enforcement can be configured to implement Content Trus
     `docker push registry.ng.bluemix.net/my_namespace/signed:latest`
 
 11. Try to create the `mypod` pod.
+
+    `kubectl apply -f ~/mypod.yaml`
 
     The pod creation is still allowed because a signed version of the image exists, even though it isn't the latest according to the Container Registry.
 
