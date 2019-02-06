@@ -60,13 +60,21 @@ Complete the following steps to deploy the logdna agent for Kubernetes:
 
 1. Select **Kubernetes**.
 
-2. Copy the first command and run it in your terminal. In this step, you create a Kubernetes secret to store your logDNA ingestion key for your service instance. The LogDNA ingestion key is used to open a secure web socket to the logDNA ingestion server and to authenticate the logging agent with the logging service. The command looks as follows:
+2. Copy the first command and run it in your terminal. In this step, you create a Kubernetes secret to store your logDNA ingestion key for your service instance. 
+
+    The LogDNA ingestion key is used to open a secure web socket to the logDNA ingestion server and to authenticate the logging agent with the logging service. 
+    
+    The command looks as follows:
 
     ```
     kubectl create secret generic logdna-agent-key --from-literal=logdna-agent-key=<logDNA_ingestion_key>
     ```
 
-3. Copy the second command and run it in your terminal to create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. The command looks as follows:
+3. Copy the second command and run it in your terminal to create a Kubernetes daemon set to deploy the LogDNA agent on every worker node of your Kubernetes cluster. 
+
+    The LogDNA agent collects logs with the extension _*.log_ and extension-less files that are stored in the _/var/log_ directory of your pod. 
+    
+    The command looks as follows:
 
     ```
     kubectl create -f https://repo.logdna.com/ibm/prod/logdna-agent-ds-us-south.yaml

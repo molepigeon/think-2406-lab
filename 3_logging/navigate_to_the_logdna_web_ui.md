@@ -18,8 +18,9 @@ Complete the following steps to launch the web UI:
 
 4.  Select one instance. Then, click **View LogDNA**.
 
-    ![image14](images/logdna_img14.png)
+
+![](images/logdna_img14.png)
     
 The **LogDNA web UI** opens.
 
-![image15](images/logdna_img15.png)
+![](images/logdna_img15.png)

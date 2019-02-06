@@ -1,4 +1,4 @@
-## Step 1: Grant permissions in the IBM Cloud {#step-1-grant-permissions-in-the-ibm-cloud}
+## Step 1: Grant permissions to your user ID in the IBM Cloud to work with the IBM Log Analysis with LogDNA service{#step-1-grant-permissions-in-the-ibm-cloud}
 
 **Note:** This step must be completed by the account owner or an administrator of the IBM Log Analysis with LogDNA service on the IBM Cloud in your account.
 
