@@ -28,6 +28,8 @@ An IAM Service ID is a special user that can access IBM Cloud APIs, but cannot l
 
     `ibmcloud iam service-api-key-create think-registry-demo-key think-registry-demo`
 
+    Find your API key in the output. You will need the API key in later steps.
+
 ## Enabling IAM policy enforcement for IBM Cloud Container Registry
 
 Make sure that IAM policy enforcement is enabled in IBM Cloud Container Registry for your account. If multiple people use IBM Cloud Container Registry in your IBM Cloud account, you must have policies in place for your users before you enable policy enforcement so that your users retain access to images in your account. If you do not have policies configured for your users, use a separate IBM Cloud account for this tutorial.
@@ -46,15 +48,13 @@ Make sure that IAM policy enforcement is enabled in IBM Cloud Container Registry
 
 ## Configuring IAM Policies
 
-Now that you have IAM policy enforcement enabled for your account, you must create policies to control the resources that it can access.
+Now that you have IAM policy enforcement enabled for your account, you must create policies to control the resources that your Service ID can access.
 
 Let's prove that we can't pull images using the Service ID.
 
 1. Log in to Container Registry using the Service ID's API key.
 
-    `docker login -u iamapikey --password-stdin registry.ng.bluemix.net`
-
-    When you are prompted for a password, paste your Service ID API key and then press enter.
+    `docker login -u iamapikey --password "<your_api_key>" registry.ng.bluemix.net`
 
     **Hint**: `registry.ng.bluemix.net` is the address of the US South instance of IBM Container Registry.
 
