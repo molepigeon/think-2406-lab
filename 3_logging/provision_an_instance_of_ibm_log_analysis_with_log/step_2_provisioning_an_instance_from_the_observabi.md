@@ -30,15 +30,13 @@ Enter a name for the service instance. For example, _logdna-marisa_
 
 ![](../images/logdna_img10.png)
 
-Select a resource group. For example, select the **Default** resource group or a different one. In the sample images you can see that the DevOps resource group is selected.
+Select a resource group. By default, the **Default** resource group is set.
 
-* By default, the **Default** resource group is set.
+You can select the **Default** resource group or a different one. In the sample images you can see that the DevOps resource group is selected. 
 
-**Note:** If you are not able to select a resource group, check that you have editing permissions on the resource group where you want to provision the instance.
+**Note:** If you cannot see a resource group or if you are not able to select a specific resource group, check that you have editing permissions on the resource group where you want to provision the instance.
 
-Select the **Lite** service plan. 
-
-* By default, the **Lite** plan is set.
+Select the **Lite** service plan. By default, the **Lite** plan is set.
 
 ![](../images/logdna_img11.png)
 
