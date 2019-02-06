@@ -105,8 +105,8 @@ The token in the default secret has access to pull images that are owned by the 
     kind: Pod
     metadata:
         name: mypod
-    labels:
-        name: mypod
+        labels:
+            app: mypod
     spec:
         containers:
           - name: mypod
