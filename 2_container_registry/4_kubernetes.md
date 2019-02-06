@@ -109,7 +109,7 @@ The token in the default secret has access to pull images that are owned by the 
         name: mypod
     spec:
         containers:
-        - name: mypod
+          - name: mypod
             image: registry.ng.bluemix.net/my_namespace/hello-world:3.6
             ports:
             - containerPort: 8080
