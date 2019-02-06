@@ -1,6 +1,6 @@
 ## [Optional] Explore other pre-defined dashboards. {#optional-explore-other-pre-defined-dashboards}
 
-For more details on these dashboards, see [https://cloud.ibm.com/docs/services/Monitoring-with-Sysdig/default_dashboards.html#predefined_dashboards](https://cloud.ibm.com/docs/services/Monitoring-with-Sysdig/default_dashboards.html)
+For more details on these dashboards, see [Sysdig pre-defined dashboards](https://cloud.ibm.com/docs/services/Monitoring-with-Sysdig/default_dashboards.html)
 
 For example, find out:
 

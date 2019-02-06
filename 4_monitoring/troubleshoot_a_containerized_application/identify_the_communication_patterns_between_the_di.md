@@ -26,9 +26,11 @@ The metric panel shows.
 
 ### 2. Segment the data by **container.id**{#2}
 
-Select the **container.id** label:
+Look for the field **Segmented by**. 
 
 ![](../images/sysdig_img44.png)
+
+Search and select the **container.id** label.
 
 ![](../images/sysdig_img45.png)
 
@@ -44,6 +46,8 @@ Select **More options**.
 ![](../images/sysdig_img47.png)
 
 Choose **Topology.**
+
+![](../images/sysdig_img48a.png)
 
 ![](../images/sysdig_img48.png)
 
