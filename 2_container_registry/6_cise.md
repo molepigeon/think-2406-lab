@@ -12,7 +12,7 @@ In this section, you will install Container Image Security Enforcement into your
 
     `helm init`
 
-    This command installs a component called Tiller into your cluster. For more information about Helm, see the Further Reading section below.
+    This command installs a component called Tiller into your cluster. For more information about Helm, see the _Further reading_ section below.
 
 2. Wait for Tiller to come up. When you can list charts in your cluster without getting an error, Tiller is ready for use.
 
