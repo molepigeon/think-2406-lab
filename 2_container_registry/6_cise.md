@@ -105,9 +105,9 @@ You have installed Container Image Security Enforcement and configured it to blo
 
 ## Further reading
 
-**TODO**
+[Enforcing container image security (Beta) (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_security_enforce.html#security_enforce)
 
-make sure to include helm docs here.
+[Helm Documentation](https://docs.helm.sh/)
 
 ## Next
 

@@ -151,7 +151,11 @@ You can have multiple Image Pull Secrets in your cluster for the same registry. 
 
 ## Further reading
 
-**TODO**
+[Automating access to IBM Cloud Container Registry (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_tokens.html#registry_access)
+
+[Building containers from images (IBM Cloud Docs)](https://console.bluemix.net/docs/containers/cs_images.html#images)
+
+[Specifying ImagePullSecrets on a Pod (Kubernetes Docs)](https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod)
 
 ## Next
 

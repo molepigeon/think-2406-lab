@@ -2,6 +2,8 @@
 
 Signing your images allows you to cryptographically verify the content of that image. Image signatures are stored in the cloud alongside your images. You can use tools such as Container Image Security Enforcement to check image signatures at deploy time, to ensure that you trust the code that's running in your production environments. IBM Cloud Container Registry refers to this feature as Content Trust.
 
+IBM Cloud Container Registry runs Notary as its trust server. Notary is a tool that manages signatures. It implements The Update Framework (TUF), a specification for securing application deployment. Both Notary and TUF are "Incubating" CNCF projects.
+
 When Content Trust is enabled, Docker pulls the most recent signed image that matches the image name that you specified, which might not be the most recent image.
 
 ## Signing your image
@@ -38,9 +40,7 @@ When you enable Content Trust, Docker pushes trust information into IBM Cloud Co
 
 ## Enforcing content trust by using Container Image Security Enforcement
 
-**TODO**
-
-CISE does trust by mutating the pod spec yadda yadda yadda.
+Container Image Security Enforcement can be configured to implement Content Trust in the same way as Docker. When you create a new workload in Kubernetes, Container Image Security Enforcement modifies the image tag in your workload specification to refer to the most recent signed version of the image before the Kubernetes API Server distributes the workload to your cluster workers. Your cluster workers pull the signed version of the image instead of the most recently tagged version, if they are different. When pods are re-scheduled by your cluster, the new workers also pull the same signed version, rather than the tagged version that may have changed in between creating the workload and re-scheduling the pod.
 
 1. Modify your ImagePolicy to enable Content Trust enforcement for images from our namespace.
 
@@ -130,9 +130,13 @@ You have signed your image and configured Container Image Security Enforcement t
 
 ## Further reading
 
-**TODO**
+[Signing images for trusted content (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_trusted_content.html#registry_trustedcontent)
 
-make sure to include content trust docs here.
+[Enforcing container image security (Beta) (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_security_enforce.html#security_enforce)
+
+[The Update Framework](https://theupdateframework.github.io/)
+
+[Notary Project](https://github.com/theupdateframework/notary)
 
 ## Next
 

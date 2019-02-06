@@ -102,9 +102,13 @@ You can use Service IDs to finely control automation access to the resources in 
 
 You can also create policies for other users in your account to control what resources they have access to.
 
-## Further reading
+## Further reading
 
-**TODO**
+[Automating access to IBM Cloud Container Registry (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_tokens.html#registry_access)
+
+[Defining user access role policies (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_users.html#user)
+
+[Managing user access with Identity and Access Management (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/iam.html#iam)
 
 ## Next
 

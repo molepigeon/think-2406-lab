@@ -100,7 +100,11 @@ You have set up an IBM Cloud Container Registry namespace in your account, built
 
 ## Further reading
 
-**TODO**
+[IBM Cloud Container Registry product page](https://icr.io)
+
+[Planning Namespaces (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_overview.html#registry_namespaces)
+
+[Adding images to your namespace (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_images_.html#registry_images_)
 
 ## Next
 

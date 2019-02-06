@@ -116,4 +116,8 @@ That concludes the IBM Cloud Container Registry part of this tutorial.
 
 ## Further reading
 
-**TODO**
+[Managing trusted signers (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_trusted_content.html#trustedcontent_signers)
+
+[Enforcing container image security (Beta) (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_security_enforce.html#security_enforce)
+
+[Work with delegation roles (Notary Docs)](https://github.com/theupdateframework/notary/blob/master/docs/advanced_usage.md#work-with-delegation-roles)
