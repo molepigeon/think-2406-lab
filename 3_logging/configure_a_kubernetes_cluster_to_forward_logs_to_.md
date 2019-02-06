@@ -48,7 +48,7 @@ Open a terminal in your local environment and complete the following steps to co
 
     The _Add agents to desired log sources_ window opens:
 
-    ![image14](images/logdna_img14.png)
+    ![image13a](images/logdna_img13a.png)
 
     Select **Kubernetes**.
 
