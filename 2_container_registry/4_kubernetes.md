@@ -14,7 +14,7 @@ You must download a configuration file to allow `kubectl` to control your cluste
 
     `ibmcloud login`
 
-2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool.
+2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool. Unless you changed the region in the tool, select `us-south`.
 
     `ibmcloud ks region-set`
 
