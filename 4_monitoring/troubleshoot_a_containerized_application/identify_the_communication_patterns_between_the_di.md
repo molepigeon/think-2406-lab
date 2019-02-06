@@ -4,28 +4,54 @@ To identify the communication patterns between the different pods., you can segm
 
 The HTTP request count metric counts the number of HTTP requests.
 
-1.  View this metric. Complete the following steps in the _Explore_ tab:
-    1.  Select **Deployment and Pods**.
-    2.  Select the namespace **ticket-generator**.
-    3.  Select the dashboard or metric that displays in your UI. In this figure, it is HTTP.
-    4.  Select **Metrics.**
-    5.  Select **Network**.
-    6.  Select **net.http.request.count**.
+![](../images/sysdig_img41.png)
+
+### 1. View the HTTP request count metric{#1}
+
+Complete the following steps in the *Explore* tab:
+1. Select **Deployment and Pods**.
+2. Select the namespace **ticket-generator**.
+3. Select the dashboard or metric that displays in your UI. In this figure, it is HTTP.
+
+    ![](../images/sysdig_img42.png)
+
+4. Select **Metrics.**
+5. Select **Network**.
+6. Select **net.http.request.count**.
 
 The metric panel shows.
 
-1.  Segment the data by **container.id**.
+![](../images/sysdig_img43.png)
+
+### 2. Segment the data by **container.id**{#2}
 
 Select the **container.id** label:
 
+![](../images/sysdig_img44.png)
+
+![](../images/sysdig_img45.png)
+
 The metric displays the average value for each container ID:
 
-1.  Get a topology perspective of the data to see each pod and how it interacts.
-    1.  Select **More options**.
-    2.  Choose **Topology.**
+![](../images/sysdig_img46.png)
+
+
+### Get a topology perspective of the data to see each pod and how it interacts{#3}
+
+Select **More options**.
+
+![](../images/sysdig_img47.png)
+
+Choose **Topology.**
+
+![](../images/sysdig_img48.png)
 
 The panel changes and displays the following view:
 
-*   1.  Expand **ticket-generator** and double click it to enlarge it:
+![](../images/sysdig_img49.png)
+
+Expand **ticket-generator** and double click it to enlarge it:
+
+![](../images/sysdig_img50.png)
 
 You can see the value of HTTP requests per container ID and how their communication pattern.

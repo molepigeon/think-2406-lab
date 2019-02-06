@@ -12,4 +12,4 @@ The ticket generator application emulates a simple consumer/producer (or pub/sub
 
 The server application is a simple python script that produces a unique Ticket ID per requests. The application will start by default with 1 consumer, 1 balancer and 2 servers, but you can easily scale it using the supporting [Kubernetes deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
-**The** **problem**: The application works well on the developer&#039;s laptop using Docker, but the same image triggers some 502 HTTP errors when it is deployed on a cluster that runs in the IBM Cloud Kubernetes service.
+**The problem**: The application works well on the developer's laptop using Docker, but the same image triggers some 502 HTTP errors when it is deployed on a cluster that runs in the IBM Cloud Kubernetes service.

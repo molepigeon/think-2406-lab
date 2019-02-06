@@ -51,7 +51,7 @@ If you get the following page, wait for a few minutes while the agent is detecte
 
 When the agent is recognized, you get the following page:
 
-![](images/sysdig_img19png)
+![](images/sysdig_img19.png)
 
 Click **GO TO NEXT STEP!** The agents that you have configured have been validated and are ready for business.
 
