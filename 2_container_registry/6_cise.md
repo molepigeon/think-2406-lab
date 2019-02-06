@@ -69,6 +69,12 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
 
     Your ImagePolicy is added to the cluster.
 
+6. Verify that your ImagePolicy was added correctly.
+
+    `kubectl get ImagePolicy -n default`
+
+    Your `myimagepolicy` policy appears in the list.
+
 ## Deploying a vulnerable image
 
 In the previous sections, you deployed a pod into your cluster, and then you identified vulnerabilities in the image. Now that you have configured Container Image Security Enforcement, deploy the pod again to have Container Image Security Enforcement block the deployment.
