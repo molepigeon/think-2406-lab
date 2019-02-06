@@ -4,7 +4,7 @@ Open a terminal in your local environment and complete the following steps to co
 
 ### 1. Log in to IBM Cloud{#1}
 
-Log in to IBM Cloud:
+Log in to IBM Cloud. Run the following command:
 
 ```
 ibmcloud login -a api.ng.bluemix.net
