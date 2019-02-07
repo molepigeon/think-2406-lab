@@ -1,14 +1,14 @@
 # Getting Started
 
-Before you start, you need the following information:
+Before you start, you need the following resources and information:
 
-* An IBM Cloud account. If you do not have one, contact one of the instructors.
+* **An IBM Cloud account**. If you do not have one, contact one of the instructors.
 
-* Access to an IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster to complete this lab.
+* Access to an IBM Cloud Lab account which contains **pre-provisioned clusters**. Each lab attendee will be granted access to one cluster to complete this lab.
 
     Note: You can also use a cluster in your account.
 
-* Login details to the lab VM image.
+* Login details to the lab **VM image**.
 
     To complete your lab by using one of the provided environments in the lab room, you must use the VM image. The image is preinstalled with all the CLIs that are required to complete the lab.
 
