@@ -86,13 +86,19 @@ To configure Container Image Security Enforcement to require a signature from a 
                 enabled: false
     ```
 
-3. Delete your `mypod` pod.
+3. Apply the new ImagePolicy.
+
+    ```bash
+    kubectl apply -f ~/imagepolicy.yaml
+    ```
+
+4. Delete your `mypod` pod.
 
     ```bash
     kubectl delete --ignore-not-found pod mypod
     ```
 
-4. Try to create the `mypod` pod.
+5. Try to create the `mypod` pod.
 
     ```bash
     kubectl apply -f mypod.yaml
@@ -100,7 +106,9 @@ To configure Container Image Security Enforcement to require a signature from a 
 
     The deployment is not allowed because while the image is signed, it is not signed by the `thinkdemo` key.
 
-5. Sign the image.
+    `admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: Deny "registry.ng.bluemix.net/my_namespace/signed:latest", failed to get content trust information: no signature found for role thinkdemo`
+
+6. Sign the image.
 
     ```bash
     docker trust sign registry.ng.bluemix.net/my_namespace/signed:latest
@@ -108,15 +116,15 @@ To configure Container Image Security Enforcement to require a signature from a 
 
     Because you have the private key for `thinkdemo` on your workstation, Docker adds a signature using that key.
 
-6. Check your image signature.
+7. Check your image signature.
 
     ```bash
-    registry.ng.bluemix.net/my_namespace/signed:latest
+    docker trust inspect --pretty registry.ng.bluemix.net/my_namespace/signed:latest
     ```
 
-    Note that a signature from `thinkdemo` is shown as well as a signature from `Repo Admin`.
+    Note that a signature from `thinkdemo` is shown.
 
-7. Try to create the `mypod` pod.
+8. Try to create the `mypod` pod.
 
     ```bash
     kubectl apply -f mypod.yaml
