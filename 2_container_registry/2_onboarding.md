@@ -79,7 +79,8 @@ Because the domain name of the registry is in the image name, to upload an image
 
     * The `FROM` instruction is an image that exists in a registry already that is used as a starting point for our image. This particular image is a copy of Alpine Linux.
     * The `ADD` instruction adds files to the image from either the filesystem or, as in this case, a web address for a Hello World web application.
-    * The `EXPOSE` instruction tells the container runtime to expect that this container will be running a server on the given port, in this case 8080.
+    * The `RUN` instruction runs the specified command in the container. In this case, the `chmod` command is used to set the `hello-world` file as executable.
+    * The `EXPOSE` instruction tells the container runtime to expect that the application running inside the container listens on port 8080.
     * The `CMD` instruction defines the command to be executed when a container is started from this image.
 
 5. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
