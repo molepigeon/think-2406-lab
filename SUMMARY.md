@@ -3,6 +3,7 @@
 ## Getting started
 
 * [Getting started](1_getting_started/1_cluster.md)
+  * []
 
 ## Workshop
 
@@ -62,6 +63,10 @@
 ## Feedback
 
 * [Feedback](feedback.md)
+
+## Information
+
+* [Information](information.md)
 
 ## Legal
 
