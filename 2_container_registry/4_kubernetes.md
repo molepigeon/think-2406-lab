@@ -12,23 +12,35 @@ You must download a configuration file to allow `kubectl` to control your cluste
 
 1. Log in to IBM Cloud. When prompted to select an account, choose the one called **IBM**.
 
-    `ibmcloud login`
+    ```bash
+    ibmcloud login
+    ```
 
 2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool. Unless you changed the region in the tool, select `us-south`.
 
-    `ibmcloud ks region-set`
+    ```bash
+    ibmcloud ks region-set
+    ```
 
 3. List your clusters.
 
-    `ibmcloud ks clusters`
+    ```bash
+    ibmcloud ks clusters
+    ```
 
 4. Download the configuration for your cluster.
 
-    `$(ibmcloud ks cluster-config <cluster-name> --export)`
+    ```bash
+    $(ibmcloud ks cluster-config cluster_name --export)
+    ```
+
+    Replace `cluster_name` with the name of your assigned cluster.
 
 5. List pods in your cluster to confirm that kubectl is configured correctly.
 
-    `kubectl get pods`
+    ```bash
+    kubectl get pods
+    ```
 
 ## Exploring default Image Pull Secrets
 
@@ -38,17 +50,23 @@ Let's look at the Image Pull Secrets that have been added to your cluster by def
 
 1. List the secrets in your cluster.
 
-    `kubectl get secrets`
+    ```bash
+    kubectl get secrets
+    ```
 
 2. Get the secret called `bluemix-default-secret` as YAML.
 
-    `kubectl get secret bluemix-default-secret -o yaml`
+    ```bash
+    kubectl get secret bluemix-default-secret -o yaml
+    ```
 
     The credentials are stored in a section called `data`, encoded as base64. Look for a long string of letters and numbers that starts with `eyJ`.
 
 3. Inspect the Image Pull Secret contents. Copy the secret data and paste it into the base64 decode command.
 
-    `echo -n <paste here> | base64 --decode | jq`
+    ```bash
+    echo -n <paste here> | base64 --decode | jq
+    ```
 
     The data is a JSON object containing a username and password for `registry.ng.bluemix.net`. The username is `token`.
 
@@ -56,11 +74,15 @@ When you create a pod from an image in the same IBM Cloud account as your Kubern
 
 1. List Service Accounts in the default Kubernetes namespace.
 
-    `kubectl get serviceaccounts`
+    ```bash
+    kubectl get serviceaccounts
+    ```
 
 2. Get the default Service Account as YAML.
 
-    `kubectl get sa default -o yaml`
+    ```bash
+    kubectl get sa default -o yaml
+    ```
 
     The default Image Pull Secrets are listed in the `imagePullSecrets` section.
 
@@ -70,7 +92,9 @@ The token in the default secret has access to pull images that are owned by the 
 
 1. Create an Image Pull Secret called `think-registry-demo` for your Service ID. Replace `<apikey>` with your Service ID API key.
 
-    `kubectl create secret docker-registry think-registry-demo --docker-server registry.ng.bluemix.net --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com`
+    ```bash
+    kubectl create secret docker-registry think-registry-demo --docker-server registry.ng.bluemix.net --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com
+    ```
 
 2. As with the default Image Pull Secrets, you can add your new Image Pull Secret to the default Service Account so that you don't have to manually add the secret to each pod that you run. You can do this interactively or by using `kubectl patch`.
 
@@ -78,7 +102,9 @@ The token in the default secret has access to pull images that are owned by the 
 
         1. Open the default Service Account for editing. The default editor for `kubectl edit` is `vim`.
 
-            `kubectl edit sa default`
+            ```bash
+            kubectl edit sa default
+            ```
 
         2. Add the following YAML to the bottom of the existing `imagePullSecrets` list. In vim, press `I` to enter insert mode.
 
@@ -88,11 +114,15 @@ The token in the default secret has access to pull images that are owned by the 
 
         3. Save and close the file.
 
-            `Esc, :wq, Enter`
+            ```text
+            Esc, :wq, Enter
+            ```
 
     2. Option 2: Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
 
-        `kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'`
+        ```bash
+        kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'
+        ```
 
 ## Starting a pod
 
@@ -117,29 +147,39 @@ The token in the default secret has access to pull images that are owned by the 
 
 2. Apply the YAML file.
 
-    `kubectl apply -f ~/mypod.yaml`
+    ```bash
+    kubectl apply -f ~/mypod.yaml
+    ```
 
 3. List pods in your cluster.
 
-    `kubectl get pods`
+    ```bash
+    kubectl get pods
+    ```
 
     A pod called `mypod` appears in the list.
 
 4. Describe the pod.
 
-    `kubectl describe pod mypod`
+    ```bash
+    kubectl describe pod mypod
+    ```
 
     If your Image Pull Secret has worked correctly, `Successfully pulled image" and "Started container" are shown in the events section.
 
 5. Get the pod specification.
 
-    `kubectl get pod mypod -o yaml`
+    ```bash
+    kubectl get pod mypod -o yaml
+    ```
 
     Note that your Image Pull Secret has been injected from the default Service Account.
 
 6. Delete the pod.
 
-    `kubectl delete pod mypod`
+    ```bash
+    kubectl delete pod mypod
+    ```
 
 ## Recap
 

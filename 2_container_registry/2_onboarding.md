@@ -19,15 +19,21 @@ From now on, this guide will use `my_namespace` as the namespace. When you see `
 
 1. Log in to your IBM Cloud account.
 
-    `ibmcloud login`
+    ```bash
+    ibmcloud login
+    ```
 
 2. Make sure that you are targeting the US South instance of IBM Cloud Container Registry.
 
-    `ibmcloud cr region-set us-south`
+    ```bash
+    ibmcloud cr region-set us-south
+    ```
 
 3. Create your namespace.
 
-    `ibmcloud cr namespace-add my_namespace`
+    ```bash
+    ibmcloud cr namespace-add my_namespace
+    ```
 
     If your chosen namespace name is available, it is assigned to your account. If you see a message saying that your chosen namespace is already in use, try again with a different namespace name.
 
@@ -41,17 +47,23 @@ Because the domain name of the registry is in the image name, to upload an image
 
 1. Create a folder for our image and navigate into it.
 
-    `mkdir ~/myimage; cd ~/myimage`
+    ```bash
+    mkdir ~/myimage; cd ~/myimage
+    ```
 
     **Best practice tip**: Keep the folder that contains your Dockerfile as minimal as possible, and only include objects that are required for your image build. When you run `docker build` later, the contents of the folder that contains the Dockerfile and all sub-directories are added to the build context. When a lot of files are in the build context, it can take a while for the build to start while Docker transfers the build context to its daemon or the remote build server.
 
 2. Create a Dockerfile.
 
-    `touch Dockerfile`
+    ```bash
+    touch Dockerfile
+    ```
 
 3. Open the Dockerfile.
 
-    `open Dockerfile`
+    ```bash
+    open Dockerfile
+    ```
 
 4. Copy the following instructions into the Dockerfile, then save the file and exit the editor.
 
@@ -72,7 +84,9 @@ Because the domain name of the registry is in the image name, to upload an image
 
 5. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
 
-    `docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6 .`
+    ```bash
+    docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6 .
+    ```
 
     **Hint**: `registry.ng.bluemix.net` is the address of the US South instance of IBM Container Registry. Don't forget to replace `my_namespace` with your chosen namespace name.
 
@@ -80,17 +94,23 @@ Because the domain name of the registry is in the image name, to upload an image
 
 1. Log in to IBM Cloud Container Registry for pushing images.
 
-    `ibmcloud cr login`
+    ```bash
+    ibmcloud cr login
+    ```
 
     This command wraps `docker login` to authenticate your Docker command line with IBM Cloud Container Registry.
 
 2. Push the image to IBM Cloud Container Registry.
 
-    `docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    ```bash
+    docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6
+    ```
 
 3. Confirm that the image has been uploaded successfully.
 
-    `ibmcloud cr images`
+    ```bash
+    ibmcloud cr images
+    ```
 
     Note that the image list shows vulnerabilities in the status column. You will explore Vulnerability Advisor and resolve these vulnerabilities later in this tutorial.
 
