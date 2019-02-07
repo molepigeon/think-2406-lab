@@ -165,7 +165,7 @@ The token in the default secret has access to pull images that are owned by the 
     kubectl describe pod mypod
     ```
 
-    If your Image Pull Secret has worked correctly, `Successfully pulled image" and "Started container" are shown in the events section.
+    If your Image Pull Secret has worked correctly, `Successfully pulled image` and `Started container` are shown in the events section.
 
 5. Get the pod specification.
 
