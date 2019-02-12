@@ -23,6 +23,8 @@ From now on, this guide will use `my_namespace` as the namespace. When you see `
     ibmcloud login
     ```
 
+    **Note:** When prompted to log in to your account, select your own account and **not** the IBM account that you were added to when you requested a cluster.
+
 2. Make sure that you are targeting the US South instance of IBM Cloud Container Registry.
 
     ```bash
