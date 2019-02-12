@@ -24,7 +24,7 @@ Before you start, you need the following resources and information:
 
 ## Request a pre-provisioned cluster{#2}
 
-Go to [Get Cluster](https://get-cluster.mybluemix.net) web page and enter your IBM ID (the email you used to sign up). The instructors will provide the lab key. 
+Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). The instructors will provide the lab key. 
 
 Unless instructed otherwise, choose the **US South** region.
 

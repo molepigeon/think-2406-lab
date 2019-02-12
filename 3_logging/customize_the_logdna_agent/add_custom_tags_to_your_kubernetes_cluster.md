@@ -5,7 +5,7 @@ Complete the following steps to add tags:
 1. From the terminal where you set the cluster context in a previous step, generate the configuration file of the agent by running the following command:
 
     ```
-    kubectl get daemonset logdna-agent -o=yaml &gt; prod-logdna-agent-ds.yaml
+    kubectl get daemonset logdna-agent -o=yaml > prod-logdna-agent-ds.yaml
     ```
 
 2. Make changes. Add the section LOGDNA_TAGS.
