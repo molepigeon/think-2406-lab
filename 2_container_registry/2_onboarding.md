@@ -59,10 +59,22 @@ Because the domain name of the registry is in the image name, to upload an image
     touch Dockerfile
     ```
 
-3. Open the Dockerfile.
+3. Open the Dockerfile using the `vi` editor.
 
     ```bash
-    open Dockerfile
+    vi Dockerfile
+    ```
+
+    **Note** to quit `vi`, type the following keyboard sequence:
+
+    ```text
+    Esc, :wq, Enter
+    ```
+
+    To quit `vi` without saving, type the following:
+
+    ```text
+    Esc, :q!, Enter
     ```
 
 4. Copy the following instructions into the Dockerfile, then save the file and exit the editor.

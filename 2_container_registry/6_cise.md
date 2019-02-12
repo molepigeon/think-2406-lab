@@ -57,7 +57,7 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
 3. Open your ImagePolicy file.
 
     ```bash
-    open ~/imagepolicy.yaml
+    vi ~/imagepolicy.yaml
     ```
 
 4. Configure your ImagePolicy to require Vulnerability Advisor for your image. Then save and close the editor.
@@ -116,7 +116,7 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 3. Edit the pod definition to use the image without vulnerabilities. Change the image tag from `3.6` to `latest`.
 
     ```bash
-    open ~/mypod.yaml
+    vi ~/mypod.yaml
     ```
 
     Change the `image:` line to use the `latest` image:

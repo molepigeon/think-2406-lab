@@ -59,7 +59,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
 1. Modify your ImagePolicy to enable Content Trust enforcement for images from our namespace.
 
     ```bash
-    open ~/imagepolicy.yaml
+    vi ~/imagepolicy.yaml
     ```
 
     ```yaml
@@ -105,7 +105,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
 5. Edit the pod definition to use the signed image. Change the image repository from `my_namespace/hello-world` to `my_namespace/signed`.
 
     ```bash
-    open ~/mypod.yaml
+    vi ~/mypod.yaml
     ```
 
     Change the `image:` line to use the `signed` image:

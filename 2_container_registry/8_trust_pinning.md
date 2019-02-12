@@ -65,7 +65,7 @@ To configure Container Image Security Enforcement to require a signature from a 
 2. Add the signer secret as a required key in your ImagePolicy.
 
     ```bash
-    open ~/imagepolicy.yaml
+    vi ~/imagepolicy.yaml
     ```
 
     ```yaml

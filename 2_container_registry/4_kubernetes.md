@@ -114,10 +114,6 @@ The token in the default secret has access to pull images that are owned by the 
 
         3. Save and close the file.
 
-            ```text
-            Esc, :wq, Enter
-            ```
-
     2. Option 2: Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
 
         ```bash
