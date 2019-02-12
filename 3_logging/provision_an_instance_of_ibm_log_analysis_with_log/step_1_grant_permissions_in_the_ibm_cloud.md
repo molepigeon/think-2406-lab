@@ -8,7 +8,7 @@ Complete the following steps to assign a user administrator role to the IBM Log 
 
 ## 1. Create the access group **logdna-admins**{#1}
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**.
+1. From the menu bar, click **Manage** > **Access (IAM)**.
 
 2. Create an access group: logdna-admins
 

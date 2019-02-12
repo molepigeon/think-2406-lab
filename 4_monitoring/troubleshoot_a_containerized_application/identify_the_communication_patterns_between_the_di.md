@@ -16,7 +16,7 @@ Select the namespace **ticket-generator**.
 
 Click ![ ](../images/sysdig_img33a.png).
 
-Select **Metrics** &gt; **Network** &gt; **net.http.request.count**
+Select **Metrics** > **Network** > **net.http.request.count**
 
 ![ ](../images/sysdig_img42.png)
 

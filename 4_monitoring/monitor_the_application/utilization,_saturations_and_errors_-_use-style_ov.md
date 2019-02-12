@@ -10,7 +10,7 @@ Complete the following steps to see the aggregated view of all containers runnin
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Default Dashboards** &gt; **Host and Containers**.
+4. Select **Default Dashboards** > **Host and Containers**.
 
 5. Select **Overview by container**.
 

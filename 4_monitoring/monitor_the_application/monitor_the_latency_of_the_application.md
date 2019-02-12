@@ -8,7 +8,7 @@ You can monitor the following **metric net.http.request.time** to monitor the la
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Metrics** &gt; **Network**.
+4. Select **Metrics** > **Network**.
 
 5. Select **net.http.request.time.**
 

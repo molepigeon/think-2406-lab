@@ -8,7 +8,7 @@ You can use the **Connection Table** dashboard to monitor how data flows between
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Default Dashboards** &gt; **Network**.
+4. Select **Default Dashboards** > **Network**.
 
 5. Select **Connections Table**.
 

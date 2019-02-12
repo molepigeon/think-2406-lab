@@ -22,7 +22,7 @@ From the navigation menu,
 
 ![ ](images/sysdig_img8.png)
 
-select **Observability**  &gt; **Monitoring**.
+select **Observability**  > **Monitoring**.
 
 The list of monitoring instances that are available on IBM Cloud is displayed.
 

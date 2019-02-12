@@ -14,9 +14,9 @@ You can use the **Kubernetes State Overview** dashboard to monitor your Kubernet
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Default Dashboards** &gt; **Kubernetes**.
+4. Select **Default Dashboards** > **Kubernetes**.
 
-5. Select **Kubernetes State** &gt; **Kubernetes State Overview**.
+5. Select **Kubernetes State** > **Kubernetes State Overview**.
 
 ![ ](../images/sysdig_img73.png)
 

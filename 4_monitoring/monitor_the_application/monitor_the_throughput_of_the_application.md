@@ -8,7 +8,7 @@ You can monitor the **metric** **request count (net.http.request.count)** to mea
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Metrics** &gt; **Network**.
+4. Select **Metrics** > **Network**.
 
 5. Select **net.http.request.count**.
 

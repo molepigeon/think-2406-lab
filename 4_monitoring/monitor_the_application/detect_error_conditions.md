@@ -12,7 +12,7 @@ You can monitor the following **metric net.http.error.count** to detect error co
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Metrics** &gt; **Network**.
+4. Select **Metrics** > **Network**.
 
 5. Select **net.http.error.count**.
 

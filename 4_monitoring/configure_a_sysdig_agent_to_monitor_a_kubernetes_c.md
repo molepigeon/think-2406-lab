@@ -43,7 +43,7 @@ ibmcloud login -a api.ng.bluemix.net
 
 5. Copy and paste that command in your terminal to set the KUBECONFIG environment variable.
 
-**Note:** Every time you log in to the IBM Cloud Kubernetes Service CLI to work with clusters, you must run these commands to set the path to the cluster&#039;s configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud.
+**Note:** Every time you log in to the IBM Cloud Kubernetes Service CLI to work with clusters, you must run these commands to set the path to the cluster's configuration file as a session variable. The Kubernetes CLI uses this variable to find a local configuration file and certificates that are necessary to connect with the cluster in IBM Cloud.
 
 ## 3. Deploy the Sysdig agent{#3}
 

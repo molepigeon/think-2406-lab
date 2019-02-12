@@ -8,7 +8,7 @@ Look at the **HTTP Dashboard**.
 
 3. Click ![ ](../images/sysdig_img33a.png).
 
-4. Select **Default Dashboards** &gt; **Applications**.
+4. Select **Default Dashboards** > **Applications**.
 
 5. Select **HTTP**.
 

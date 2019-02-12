@@ -4,9 +4,9 @@ In the *Explore* tab, select the **ticket-generator** namespace.
 
 Click ![ ](../images/sysdig_img33a.png).
 
-Select **Hosts &amp; Containers**.
+Select **Hosts & Containers**.
 
-Expand _Hosts &amp; Containers_, and select **Top Processes**.
+Expand _Hosts & Containers_, and select **Top Processes**.
 
 ![ ](../images/sysdig_img37.png)
 

@@ -5,7 +5,7 @@ Complete the following steps to exclude log files:
 1. From the terminal where you set the cluster context in a previous step, generate the configuration file of the agent by running the following command:
 
     ```bash
-    kubectl get daemonset logdna-agent -o=yaml &gt; prod-logdna-agent-ds.yaml
+    kubectl get daemonset logdna-agent -o=yaml > prod-logdna-agent-ds.yaml
     ```
 
 2. Make changes. Add the section **LOGDNA_EXCLUDE**, and exclude *calico-node* logs. Add to the yaml file:

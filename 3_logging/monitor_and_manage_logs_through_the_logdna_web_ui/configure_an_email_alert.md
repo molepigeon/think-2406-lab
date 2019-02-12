@@ -7,11 +7,11 @@ You can attach one or more alerts to a view. You can define multiple notificatio
 You can configure any of the following conditions for an alert:
 
 * Time frequency: Specify how often to trigger an alert. Valid values are: 30 seconds, 1 minute, 5 minutes, 15 minutes, 30 minutes, 1 hour, 6 hours, 12 hours, 24 hours
-* Log lines counter: Specify the number of log lines that match the view&#039;s filtering and search criteria. When the number of log lines is reached, an alert is triggered.
+* Log lines counter: Specify the number of log lines that match the view's filtering and search criteria. When the number of log lines is reached, an alert is triggered.
 
 You can decide whether both conditions are checked or only one. If both conditions are set, an alert is triggered when any of the thresholds is reached.
 
-For example, you can configure an alert that is triggered after 30 seconds, or when a 100 log lines that match the view&#039;s filtering and search criteria are collected.
+For example, you can configure an alert that is triggered after 30 seconds, or when a 100 log lines that match the view's filtering and search criteria are collected.
 
 You can configure multiple notification channels. Valid channels are: email, Slack, PagerDuty, Webhook, OpsGenie, Datadog, AppOptics, VictorOps
 
