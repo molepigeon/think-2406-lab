@@ -13,11 +13,10 @@ There are different parameters that you can configure to customize the LogDNA ag
 
 In this lab, you will learn how to add custom tags to your Kubernetes cluster.
 
-Tags are available in the _Views_ tab of the LOgDNA web UI. In the section **All Tags**, you will find additional tags that you configure by customizing the LogDNA agent.
+Tags are available in the _Views_ tab of the LogDNA web UI. In the section **All Tags**, you will find additional tags that you configure by customizing the LogDNA agent.
 
 ![image37](../images/logdna_img37.png)
 
 Tags are also associated with a log record. If you look in detail to a log record in a view, you can see the **Tags** section where the default tags and custom tags will display:
 
 ![image38](../images/logdna_img38.png)
-
