@@ -52,4 +52,4 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 
 ## Login details to the lab VM image{#3}
 
-The VM image user id is **ibmuser** and the password is **thinkibm**.
+The VM image user id is **sysadmin** and the password is **thinkibm**.
