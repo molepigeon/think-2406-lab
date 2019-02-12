@@ -26,7 +26,7 @@ The session is comprised of a number of exercises focused around each of the ser
 
 The simplest way to navigate this tutorial is the **Next** and **Previous** buttons at the bottom of each page, but you can also click a particular section in the sidebar to jump to it.
 
-**Note: Each section (part) of the lab is designed to be independent from the others. Therefore, you can start with any section of the lab.**
+**Note: The three parts of the lab are designed to be independent from the others. Therefore, you can start with any part of the lab.
 
 ## Help
 
