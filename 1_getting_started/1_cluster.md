@@ -2,7 +2,7 @@
 
 Before you start, you need the following resources and information:
 
-* **An IBM Cloud account**. If you do not have one, contact one of the instructors to get a rpomotional code that you can apply in your account to complete the lab.
+* **An IBM Cloud account**. If you do not have one, contact one of the instructors to get a promotional code that you can apply in your account to complete the lab.
 
 * Access to an IBM Cloud Lab account which contains **pre-provisioned clusters**. Each lab attendee will be granted access to one cluster to complete this lab.
 
@@ -27,7 +27,7 @@ Before you start, you need the following resources and information:
 
 2. Select **Manage > Account > Account settings**.
 
-3. Look for section **Feature (Promo) Codes**.
+3. Look for the section **Feature (Promo) Codes**.
 
 4. Enter your promotional code.
 
