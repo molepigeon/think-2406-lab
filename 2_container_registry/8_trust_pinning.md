@@ -2,7 +2,7 @@
 
 Content Trust allows you to sign images, but it gives control over image signatures to the first person who pushes signed data into the trust server. When using trusted content in the way that you did in the previous section, you trusted that the IBM Cloud Container Registry trust server was returning valid signed digests.
 
-A proper security model would hold true even when the trust server were compromised. Container Image Security Enforcement should be able to detect when the signature is invalid, and prevent deployment of the invalid image.
+A proper security model would hold true even if the trust server were compromised. Your cluster should be able to detect when the signature is invalid, and prevent deployment of the invalid image.
 
 With Content Trust, you can add multiple people's keys as signers in each image repository, and you can configure Container Image Security Enforcement to require a signature from a given signer. When it is configured to require a signature from a particular signer, Container Image Security Enforcement also verifies their signature by using that signer's public key.
 
@@ -14,7 +14,9 @@ You can also use multiple signers to indicate someone's approval of an image in 
 
 1. Create a signing key called `thinkdemo`.
 
-    `docker trust key generate thinkdemo`
+    ```bash
+    docker trust key generate thinkdemo
+    ```
 
     The private key goes in to your Docker Content Trust directory. The public key is saved to `thinkdemo.pub` in your working directory.
 
@@ -22,23 +24,33 @@ You can also use multiple signers to indicate someone's approval of an image in 
 
 1. Set the `DOCKER_CONTENT_TRUST` variable to enable Content Trust.
 
-    `export DOCKER_CONTENT_TRUST=1`
+    ```bash
+    export DOCKER_CONTENT_TRUST=1
+    ```
 
     If you close your terminal window, you must repeat this command to keep using Content Trust.
 
 2. Log in to IBM Cloud Container Registry.
 
-    `ibmcloud cr login`
+    ```bash
+    ibmcloud cr login
+    ```
 
     The command returns an export line to set the `DOCKER_CONTENT_TRUST_SERVER` variable.
 
-    `export DOCKER_CONTENT_TRUST_SERVER=https://registry.ng.bluemix.net:4443`
+    ```bash
+    export DOCKER_CONTENT_TRUST_SERVER=https://registry.ng.bluemix.net:4443
+    ```
 
 3. Run the export line that was returned from the `ibmcloud cr login` command.
 
 4. Add your key as a signer.
 
-    `docker trust signer add --key=thinkdemo.pub thinkdemo registry.ng.bluemix.net/my_namespace/signed`
+    ```bash
+    docker trust signer add --key=thinkdemo.pub thinkdemo registry.ng.bluemix.net/my_namespace/signed
+    ```
+
+    **Hint**: Don't forget to replace `my_namespace` with your Registry namespace.
 
 ## Enforcing specific signers in Kubernetes
 
@@ -46,11 +58,15 @@ To configure Container Image Security Enforcement to require a signature from a 
 
 1. Create a secret for the signer's public key.
 
-    `kubectl create secret generic thinkdemo --from-literal=name=thinkdemo --from-file=publicKey=thinkdemo.pub`
+    ```bash
+    kubectl create secret generic thinkdemo --from-literal=name=thinkdemo --from-file=publicKey=thinkdemo.pub
+    ```
 
 2. Add the signer secret as a required key in your ImagePolicy.
 
-    `open ~/imagepolicy.yaml`
+    ```bash
+    open ~/imagepolicy.yaml
+    ```
 
     ```yaml
     apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
@@ -70,31 +86,49 @@ To configure Container Image Security Enforcement to require a signature from a 
                 enabled: false
     ```
 
-3. Delete your `mypod` pod.
+3. Apply the new ImagePolicy.
 
-    `kubectl delete --ignore-not-found pod mypod`
+    ```bash
+    kubectl apply -f ~/imagepolicy.yaml
+    ```
 
-4. Try to create the `mypod` pod.
+4. Delete your `mypod` pod.
 
-    `kubectl apply -f mypod.yaml`
+    ```bash
+    kubectl delete --ignore-not-found pod mypod
+    ```
+
+5. Try to create the `mypod` pod.
+
+    ```bash
+    kubectl apply -f mypod.yaml
+    ```
 
     The deployment is not allowed because while the image is signed, it is not signed by the `thinkdemo` key.
 
-5. Sign the image.
+    `admission webhook "trust.hooks.securityenforcement.admission.cloud.ibm.com" denied the request: Deny "registry.ng.bluemix.net/my_namespace/signed:latest", failed to get content trust information: no signature found for role thinkdemo`
 
-    `docker trust sign registry.ng.bluemix.net/my_namespace/signed:latest`
+6. Sign the image.
+
+    ```bash
+    docker trust sign registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
     Because you have the private key for `thinkdemo` on your workstation, Docker adds a signature using that key.
 
-6. Check your image signature.
+7. Check your image signature.
 
-    `registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker trust inspect --pretty registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
-    Note that a signature from `thinkdemo` is shown as well as a signature from `Repo Admin`.
+    Note that a signature from `thinkdemo` is shown.
 
-7. Try to create the `mypod` pod.
+8. Try to create the `mypod` pod.
 
-    `kubectl apply -f mypod.yaml`
+    ```bash
+    kubectl apply -f mypod.yaml
+    ```
 
     The deployment is allowed because the image is signed by the required `thinkdemo` key.
 
@@ -102,11 +136,15 @@ To configure Container Image Security Enforcement to require a signature from a 
 
 1. Uninstall Container Image Security Enforcement.
 
-    `helm delete --purge cise`
+    ```bash
+    helm delete --purge cise
+    ```
 
 2. Delete your `mypod` pod.
 
-    `kubectl delete --ignore-not-found pod mypod`
+    ```bash
+    kubectl delete --ignore-not-found pod mypod
+    ```
 
 ## Recap
 

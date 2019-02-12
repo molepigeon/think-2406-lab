@@ -46,4 +46,3 @@ The different sections in this part of the lab will show you how to:
 ## Duration
 
 The estimated time to complete this part of the lab is 1 hour.
-

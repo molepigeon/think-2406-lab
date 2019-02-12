@@ -8,15 +8,22 @@ An IAM Service ID is a special user that can access IBM Cloud APIs, but cannot l
 
 1. Log in to your IBM Cloud account.
 
-    `ibmcloud login`
+    ```bash
+    ibmcloud login
+    ```
 
 2. Create an IAM Service ID called `think-registry-demo`. The description field can be any text that you want to help you to recognise the Service ID later.
 
-    `ibmcloud iam service-id-create think-registry-demo --description "Service ID created for session 2406 at Think 2019"`
+    ```bash
+    ibmcloud iam service-id-create think-registry-demo --description "Service ID created for session 2406 at Think 2019"
+    ```
 
 3. List your Service IDs to see your new Service ID in the list.
 
-    `ibmcloud iam service-ids`
+    ```bash
+    ibmcloud iam service-ids
+    ```
+
     ```text
     Getting all services IDs bound to current account as michaelh@uk.ibm.com...
     OK
@@ -26,7 +33,9 @@ An IAM Service ID is a special user that can access IBM Cloud APIs, but cannot l
 
 4. Create an API key for your new Service ID called `think-registry-demo-key`.
 
-    `ibmcloud iam service-api-key-create think-registry-demo-key think-registry-demo`
+    ```bash
+    ibmcloud iam service-api-key-create think-registry-demo-key think-registry-demo
+    ```
 
     Find your API key in the output. You will need the API key in later steps.
 
@@ -36,15 +45,21 @@ Make sure that IAM policy enforcement is enabled in IBM Cloud Container Registry
 
 1. Make sure that you are targeting the correct IBM Cloud account.
 
-    `ibmcloud target`
+    ```bash
+    ibmcloud target
+    ```
 
 2. Make sure that you are targeting the US South instance of IBM Cloud Container Registry.
 
-    `ibmcloud cr region-set us-south`
+    ```bash
+    ibmcloud cr region-set us-south
+    ```
 
 3. Enable IAM policy enforcement for IBM Cloud Container Registry in your account.
 
-    `ibmcloud cr iam-policies-enable`
+    ```bash
+    ibmcloud cr iam-policies-enable
+    ```
 
 ## Configuring IAM Policies
 
@@ -54,13 +69,17 @@ Let's prove that we can't pull images using the Service ID.
 
 1. Log in to Container Registry using the Service ID's API key.
 
-    `docker login -u iamapikey --password "<your_api_key>" registry.ng.bluemix.net`
+    ```bash
+    docker login -u iamapikey --password "<your_api_key>" registry.ng.bluemix.net
+    ```
 
     **Hint**: `registry.ng.bluemix.net` is the address of the US South instance of IBM Container Registry.
 
 2. Try to pull the image that you pushed earlier.
 
-    `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    ```bash
+    docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6
+    ```
 
     The pull fails with an error message:
 
@@ -72,19 +91,25 @@ Now let's create an IAM policy to allow your Service ID to access your namespace
 
 1. Create an IAM policy to grant Reader role on your namespace to the service ID.
 
-    `ibmcloud iam service-policy-create think-registry-demo --roles Reader --service-name container-registry --region us-south --resource-type namespace --resource my_namespace`
+    ```bash
+    ibmcloud iam service-policy-create think-registry-demo --roles Reader --service-name container-registry --region us-south --resource-type namespace --resource my_namespace
+    ```
 
     **Hint**: Don't forget to replace `my_namespace` with your chosen namespace name.
 
 2. Try your image pull again.
 
-    `docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    ```bash
+    docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6
+    ```
 
     The pull works because your IAM policy allows the Service ID to access the image.
 
 3. Try to push the image back to the registry.
 
-    `docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6`
+    ```bash
+    docker push registry.ng.bluemix.net/my_namespace/hello-world:3.6
+    ```
 
     The push is not allowed because your Service ID does not have Writer access to IBM Cloud Container Registry.
 

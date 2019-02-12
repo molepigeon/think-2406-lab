@@ -12,33 +12,45 @@ When you enable Content Trust, Docker pushes trust information into IBM Cloud Co
 
 1. Set the `DOCKER_CONTENT_TRUST` variable to enable Content Trust.
 
-    `export DOCKER_CONTENT_TRUST=1`
+    ```bash
+    export DOCKER_CONTENT_TRUST=1
+    ```
 
     If you close your terminal window, you must repeat this command to keep using Content Trust.
 
 2. Log in to IBM Cloud Container Registry.
 
-    `ibmcloud cr login`
+    ```bash
+    ibmcloud cr login
+    ```
 
     The command returns an export line to set the `DOCKER_CONTENT_TRUST_SERVER` variable.
 
-    `export DOCKER_CONTENT_TRUST_SERVER=https://registry.ng.bluemix.net:4443`
+    ```bash
+    export DOCKER_CONTENT_TRUST_SERVER=https://registry.ng.bluemix.net:4443
+    ```
 
 3. Run the export line that was returned from the `ibmcloud cr login` command.
 
 4. Give your image a new name. Normally you can sign your image in place, but you will be using the unsigned image later.
 
-    `docker tag registry.ng.bluemix.net/my_namespace/hello-world:latest registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker tag registry.ng.bluemix.net/my_namespace/hello-world:latest registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
     **Hint**: Don't forget to replace `my_namespace` with your Registry namespace in both image names.
 
 5. Push your image. Once the push is complete, Docker will prompt you to create a number of key passphrases. Make sure to remember your passphrases, because you will need them to add more trust data later.
 
-    `docker push registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker push registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
 6. Check your image signature.
 
-    `docker trust inspect --pretty registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker trust inspect --pretty registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
 ## Enforcing content trust by using Container Image Security Enforcement
 
@@ -46,7 +58,9 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 1. Modify your ImagePolicy to enable Content Trust enforcement for images from our namespace.
 
-    `open ~/imagepolicy.yaml`
+    ```bash
+    open ~/imagepolicy.yaml
+    ```
 
     ```yaml
     apiVersion: securityenforcement.admission.cloud.ibm.com/v1beta1
@@ -68,15 +82,21 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 2. Apply the new ImagePolicy.
 
-    `kubectl apply -f ~/imagepolicy.yaml`
+    ```bash
+    kubectl apply -f ~/imagepolicy.yaml
+    ```
 
 3. Delete your `mypod` pod.
 
-    `kubectl delete --ignore-not-found pod mypod`
+    ```bash
+    kubectl delete --ignore-not-found pod mypod
+    ```
 
 4. Try to create the `mypod` pod.
 
-    `kubectl apply -f ~/mypod.yaml`
+    ```bash
+    kubectl apply -f ~/mypod.yaml
+    ```
 
     The deployment is not allowed because the image is not signed.
 
@@ -84,23 +104,31 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 5. Edit the pod definition to use the signed image. Change the image repository from `my_namespace/hello-world` to `my_namespace/signed`.
 
-    `open ~/mypod.yaml`
+    ```bash
+    open ~/mypod.yaml
+    ```
 
     Change the `image:` line to use the `signed` image:
 
-    `registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
     Save and close the file.
 
 6. Try to create the `mypod` pod.
 
-    `kubectl apply -f ~/mypod.yaml`
+    ```bash
+    kubectl apply -f ~/mypod.yaml
+    ```
 
     The pod creation is allowed because the image is signed.
 
 7. Look at the specification for your pod.
 
-    `kubectl get pod mypod -o yaml`
+    ```bash
+    kubectl get pod mypod -o yaml
+    ```
 
     Note that the image has changed to a canonical format image name:
 
@@ -110,27 +138,39 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
 8. Delete your `mypod` pod.
 
-    `kubectl delete --ignore-not-found pod mypod`
+    ```bash
+    kubectl delete --ignore-not-found pod mypod
+    ```
 
 9. Turn off Content Trust.
 
-    `unset DOCKER_CONTENT_TRUST`
+    ```bash
+    unset DOCKER_CONTENT_TRUST
+    ```
 
 10. Push the vulnerable image over the top of the signed image. Note that because you turned off Content Trust, no trust data is pushed this time.
 
-    `docker tag registry.ng.bluemix.net/my_namespace/hello-world:3.6 registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker tag registry.ng.bluemix.net/my_namespace/hello-world:3.6 registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
-    `docker push registry.ng.bluemix.net/my_namespace/signed:latest`
+    ```bash
+    docker push registry.ng.bluemix.net/my_namespace/signed:latest
+    ```
 
 11. Try to create the `mypod` pod.
 
-    `kubectl apply -f ~/mypod.yaml`
+    ```bash
+    kubectl apply -f ~/mypod.yaml
+    ```
 
     The pod creation is still allowed because a signed version of the image exists, even though it isn't the latest according to the Container Registry.
 
 12. Look at the specification for your pod again.
 
-    `kubectl get pod mypod -o yaml`
+    ```bash
+    kubectl get pod mypod -o yaml
+    ```
 
     Note that the image was changed to the same digest as before, because it is still the most recently signed version of the image.
 

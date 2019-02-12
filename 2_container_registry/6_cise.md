@@ -10,21 +10,29 @@ In this section, you will install Container Image Security Enforcement into your
 
 1. Install Helm into the cluster.
 
-    `helm init`
+    ```bash
+    helm init
+    ```
 
     This command installs a component called Tiller into your cluster. For more information about Helm, see the _Further reading_ section below.
 
 2. Wait for Tiller to come up. When you can list charts in your cluster without getting an error, Tiller is ready for use.
 
-    `helm list`
+    ```bash
+    helm list
+    ```
 
 3. Add the IBM Helm repository into your list of repositories.
 
-    `helm repo add ibm https://registry.bluemix.net/helm/ibm`
+    ```bash
+    helm repo add ibm https://registry.bluemix.net/helm/ibm
+    ```
 
 4. Install the Container Image Security Enforcement chart.
 
-    `helm install --name cise ibm/ibmcloud-image-enforcement`
+    ```bash
+    helm install --name cise ibm/ibmcloud-image-enforcement
+    ```
 
 ## Exploring Image Policies
 
@@ -34,17 +42,23 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
 
 1. View the default ClusterImagePolicy.
 
-    `kubectl get ClusterImagePolicy -o yaml`
+    ```bash
+    kubectl get ClusterImagePolicy -o yaml
+    ```
 
     Note that `trust` and `va` are both set to `true` for `*`. Container Image Security Enforcement will only allow images to be deployed into the cluster if they have no vulnerabilities and are signed using Content Trust. You will explore Content Trust in a later section.
 
 2. Create a YAML file for an ImagePolicy.
 
-    `touch ~/imagepolicy.yaml`
+    ```bash
+    touch ~/imagepolicy.yaml
+    ```
 
 3. Open your ImagePolicy file.
 
-    `open ~/imagepolicy.yaml`
+    ```bash
+    open ~/imagepolicy.yaml
+    ```
 
 4. Configure your ImagePolicy to require Vulnerability Advisor for your image. Then save and close the editor.
 
@@ -65,13 +79,17 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
     ```
 5. Apply your ImagePolicy.
 
-    `kubectl apply -f ~/imagepolicy.yaml`
+    ```bash
+    kubectl apply -f ~/imagepolicy.yaml
+    ```
 
     Your ImagePolicy is added to the cluster.
 
 6. Verify that your ImagePolicy was added correctly.
 
-    `kubectl get ImagePolicy -n default`
+    ```bash
+    kubectl get ImagePolicy -n default
+    ```
 
     Your `myimagepolicy` policy appears in the list.
 
@@ -81,11 +99,15 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 
 1. Make sure that the `mypod` is gone from your cluster.
 
-    `kubectl delete --ignore-not-found pod mypod`
+    ```bash
+    kubectl delete --ignore-not-found pod mypod
+    ```
 
 2. Try to create the `mypod` pod.
 
-    `kubectl apply -f mypod.yaml`
+    ```bash
+    kubectl apply -f mypod.yaml
+    ```
 
     The deployment is not allowed because of the vulnerabilities in the image.
 
@@ -93,11 +115,15 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 
 3. Edit the pod definition to use the image without vulnerabilities. Change the image tag from `3.6` to `latest`.
 
-    `open ~/mypod.yaml`
+    ```bash
+    open ~/mypod.yaml
+    ```
 
     Change the `image:` line to use the `latest` image:
 
-    `registry.ng.bluemix.net/my_namespace/hello-world:latest`
+    ```bash
+    registry.ng.bluemix.net/my_namespace/hello-world:latest
+    ```
 
     Save and close the file.
 
