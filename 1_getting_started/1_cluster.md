@@ -2,15 +2,15 @@
 
 Before you start, you need the following resources and information:
 
-* **An IBM Cloud account**. If you do not have one, contact one of the instructors.
+* **An IBM Cloud account**. If you do not have one, contact one of the instructors to get a rpomotional code that you can apply in your account to complete the lab.
 
 * Access to an IBM Cloud Lab account which contains **pre-provisioned clusters**. Each lab attendee will be granted access to one cluster to complete this lab.
 
-    Note: You can also use a cluster in your account.
+    Note: You can also use a cluster that you might have provisioned in your account.
 
 * Login details to the lab **VM image**.
 
-    To complete your lab by using one of the provided environments in the lab room, you must use the VM image. The image is preinstalled with all the CLIs that are required to complete the lab.
+    To complete your lab by using one of the provided environments in the lab room, you must use the lab VM image. The image is preinstalled with all the CLIs that are required to complete the lab.
 
 
 ## [optional] Sign up for an IBM Cloud account{#1}
@@ -33,7 +33,7 @@ Before you start, you need the following resources and information:
 
 ## Request a pre-provisioned cluster{#2}
 
-Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). Use the following lab key: **thinkibm**.
+Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). Contact the lab instructors to get the lab key.
 
 Unless instructed otherwise, choose the **US South** region.
 
