@@ -65,7 +65,7 @@
 
 ## Information
 
-* [Information](information.md)
+* [Further reading](information.md)
 
 ## Legal
 
