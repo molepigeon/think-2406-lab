@@ -12,7 +12,6 @@ Before you start, you need the following resources and information:
 
     To complete your lab by using one of the provided environments in the lab room, you must use the lab VM image. The image is preinstalled with all the CLIs that are required to complete the lab.
 
-
 ## [optional] Sign up for an IBM Cloud account{#1}
 
 1. Create your own [IBM Cloud account](https://cloud.ibm.com).
@@ -51,8 +50,6 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 
 ![cluster dashboard](https://raw.githubusercontent.com/rvennam/istio101/master/workshop/README_images/dashboard.png)
 
-
 ## Login details to the lab VM image{#3}
 
 The VM image user id is **ibmuser** and the password is **thinkibm**.
-
