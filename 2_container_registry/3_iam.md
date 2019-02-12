@@ -83,11 +83,11 @@ Let's prove that we can't pull images using the Service ID.
     docker pull registry.ng.bluemix.net/my_namespace/hello-world:3.6
     ```
 
+    **Hint**: Don't forget to replace `my_namespace` with your chosen namespace name.
+
     The pull fails with an error message:
 
     `Error response from daemon: pull access denied for ...`
-
-    **Hint**: Don't forget to replace `my_namespace` with your chosen namespace name.
 
 Now let's create an IAM policy to allow your Service ID to access your namespace.
 
