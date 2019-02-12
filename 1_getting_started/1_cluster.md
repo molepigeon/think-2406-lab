@@ -21,10 +21,19 @@ Before you start, you need the following resources and information:
 
 3. Log in to [IBM Cloud](https://cloud.ibm.com).
 
+## Add your promotional code{#4}
+
+1. Login to [IBM Cloud account](https://cloud.ibm.com) with your IBM ID.
+
+2. Select **Manage > Account > Account settings**.
+
+3. Look for section **Feature (Promo) Codes**.
+
+4. Enter your promotional code.
 
 ## Request a pre-provisioned cluster{#2}
 
-Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). The instructors will provide the lab key. 
+Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). Use the following lab key: **thinkibm**.
 
 Unless instructed otherwise, choose the **US South** region.
 
@@ -43,4 +52,7 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 ![cluster dashboard](https://raw.githubusercontent.com/rvennam/istio101/master/workshop/README_images/dashboard.png)
 
 
+## Login details to the lab VM image{#3}
+
+The VM image user id is **ibmuser** and the password is **thinkibm**.
 
