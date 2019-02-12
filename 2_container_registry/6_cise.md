@@ -77,6 +77,7 @@ When you installed Container Image Security Enforcement, a default ClusterImageP
             va:
                 enabled: true
     ```
+
 5. Apply your ImagePolicy.
 
     ```bash
