@@ -23,7 +23,7 @@ Notice that when you attach an alert to a view, a bell icon is displayed with th
 
 Complete the following steps to configure an alert:
 
-1. From the Views section, select the view you created in the precious step.
+1. From the Views section, select the view you created in the previous step.
 
 2. Select **Attach an alert**.
 

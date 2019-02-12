@@ -18,7 +18,7 @@ In this lab, you will learn how to export data from the LogDNA web UI. To learn 
 
 Complete the following steps to export log data:
 
-1. From the Views section, select the view you created in the precious step.
+1. From the Views section, select the view you created in the previous step.
 
     ![ ](../images/logdna_img25.png)
 
