@@ -1,16 +1,15 @@
-## Step 1: Grant your user permissions to provision an instance in the IBM Cloud {#step-1-grant-your-user-permissions-to-provision-an-instance-in-the-ibm-cloud}
+# Step 1: Grant your user permissions to provision an instance in the IBM Cloud {#step-1-grant-your-user-permissions-to-provision-an-instance-in-the-ibm-cloud}
 
 **Note:** This step must be completed by the account owner or an administrator of the IBM Cloud Monitoring with Sysdig service on the IBM Cloud.
 
 Complete the following steps to assign a user administrator role to the IBM Cloud Monitoring with Sysdig service:
 
+## 1. Create the access group **sysdig-admins**{#1}
 
-### 1. Create the access group **sysdig-admins**{#1}
+1. From the menu bar, click **Manage** > **Access (IAM)**.
 
-1. From the menu bar, click **Manage** &gt; **Access (IAM)**.
+2. Create an access group: logdna-admins
 
-2. Create an access group: logdna-admins  
-        
     a. Select **Access Groups**.
 
     b. Click **Create**.
@@ -19,10 +18,9 @@ Complete the following steps to assign a user administrator role to the IBM Clou
 
     d. [Optional] Enter a description.
 
-![](../images/sysdig_img3.png)
+![ ](../images/sysdig_img3.png)
 
-
-### 2. Add an access policy for the resource group where you are going to provision the IBM Cloud Monitoring with Sysdig service{#2}
+## 2. Add an access policy for the resource group where you are going to provision the IBM Cloud Monitoring with Sysdig service{#2}
 
 From the access group dashboard, complete the following steps:
 
@@ -32,9 +30,9 @@ From the access group dashboard, complete the following steps:
 
 3. Select **Assign Access within a Resource Group**.
 
-    ![](../images/sysdig_img4.png)
+    ![ ](../images/sysdig_img4.png)
 
-4. Select the name of the resource group. Choose **Default**. 
+4. Select the name of the resource group. Choose **Default**.
 
     Note: You can use any other resource group where you have permissions in the account.
 
@@ -42,8 +40,7 @@ From the access group dashboard, complete the following steps:
 
 6. Click **Assign**.
 
-![](../images/sysdig_img5.png)
-
+![ ](../images/sysdig_img5.png)
 
 ### 3. Add an access policy to work with the IBM Cloud Monitoring with Sysdig service{#3}
 
@@ -55,7 +52,7 @@ From the access group dashboard, complete the following steps:
 
 3. Select **Assign Access to resources**.
 
-    ![](../images/sysdig_img6.png)
+    ![ ](../images/sysdig_img6.png)
 
 4. Select **IBM Cloud Monitoring with Sysdig**.
 
@@ -67,9 +64,7 @@ From the access group dashboard, complete the following steps:
 
 8. Click **Assign**.
 
-![](../images/sysdig_img7.png)
-
-
+![ ](../images/sysdig_img7.png)
 
 ### 4. Grant your user ID permissions{#4}
 
@@ -78,5 +73,3 @@ From the access group dashboard, complete the following steps:
 2. Choose your IBM ID.
 
 3. Click **Add to group**.
-
-

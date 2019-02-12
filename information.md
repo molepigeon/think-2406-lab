@@ -1,12 +1,10 @@
 # Information
 
-
-## IBM Cloud Container Registry service
+## IBM Cloud Container Registry
 
 [IBM Cloud Container Registry product page](https://icr.io)
 
 [About IBM Cloud Container Registry (IBM Cloud Docs)](https://console.bluemix.net/docs/services/Registry/registry_overview.html#registry_overview)
-
 
 ## IBM Log Analysis with LogDNA
 
