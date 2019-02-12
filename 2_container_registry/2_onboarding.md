@@ -65,7 +65,7 @@ Because the domain name of the registry is in the image name, to upload an image
     vi Dockerfile
     ```
 
-    **Note** to quit `vi`, type the following keyboard sequence:
+    **Note:** to quit `vi`, type the following keyboard sequence:
 
     ```text
     Esc, :wq, Enter
