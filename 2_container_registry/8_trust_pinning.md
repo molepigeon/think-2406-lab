@@ -8,7 +8,7 @@ With Content Trust, you can add multiple people's keys as signers in each image 
 
 You can also use multiple signers to indicate someone's approval of an image in a deployment process. In this case, Container Image Security Enforcement could verify this signature to ensure that they have signed off on an image before it is deployed to production.
 
-**Note:** This section will add another 15 minutes to the duration of this part of the tutorial. If you would like enough time to explore the Logging and Monitoring parts in detail during the session, you should consider returning to this section once you have completed those parts.
+**Note:** This section will add another 15 minutes to the duration of this part of the tutorial. If you would like enough time to explore the Logging and Monitoring parts in detail during the session, you should consider returning to this section once you have completed those parts. If you'd like to skip this section, run the commands in the *Cleaning up* section below before continuing on to the next part.
 
 ## Creating a signing key
 

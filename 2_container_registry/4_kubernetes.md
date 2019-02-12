@@ -42,7 +42,7 @@ You must download a configuration file to allow `kubectl` to control your cluste
     kubectl get pods
     ```
 
-## Exploring default Image Pull Secrets
+## [optional] Exploring default Image Pull Secrets
 
 Kubernetes stores authentication information for container registries in resources called Image Pull Secrets. Each Image Pull Secret contains a single username and password for a single registry.
 
