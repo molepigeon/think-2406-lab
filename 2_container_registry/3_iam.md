@@ -89,7 +89,7 @@ Let's prove that we can't pull images using the Service ID.
 
     `Error response from daemon: pull access denied for ...`
 
-Now let's create an IAM policy to allow your Service ID to access your namespace.
+Now let's create an IAM policy to allow your Service ID to pull, but not push, images in your namespace.
 
 1. Create an IAM policy to grant Reader role on your namespace to the service ID.
 
