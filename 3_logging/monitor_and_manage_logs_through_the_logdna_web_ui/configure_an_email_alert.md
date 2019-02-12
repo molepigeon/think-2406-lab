@@ -1,4 +1,4 @@
-## [Optional] Configure an email alert {#configure-an-email-alert}
+# [Optional] Configure an email alert {#configure-an-email-alert}
 
 **NOTE: To complete this step you need a paid plan. Upgrade the service plan.**
 
@@ -6,8 +6,8 @@ You can attach one or more alerts to a view. You can define multiple notificatio
 
 You can configure any of the following conditions for an alert:
 
-*   Time frequency: Specify how often to trigger an alert. Valid values are: 30 seconds, 1 minute, 5 minutes, 15 minutes, 30 minutes, 1 hour, 6 hours, 12 hours, 24 hours
-*   Log lines counter: Specify the number of log lines that match the view&#039;s filtering and search criteria. When the number of log lines is reached, an alert is triggered.
+* Time frequency: Specify how often to trigger an alert. Valid values are: 30 seconds, 1 minute, 5 minutes, 15 minutes, 30 minutes, 1 hour, 6 hours, 12 hours, 24 hours
+* Log lines counter: Specify the number of log lines that match the view&#039;s filtering and search criteria. When the number of log lines is reached, an alert is triggered.
 
 You can decide whether both conditions are checked or only one. If both conditions are set, an alert is triggered when any of the thresholds is reached.
 
@@ -27,40 +27,40 @@ Complete the following steps to configure an alert:
 
 2. Select **Attach an alert**.
 
-    ![image28](../images/logdna_img28.png)
+    ![ ](../images/logdna_img28.png)
 
     The alert wizard page opens.
 
-    ![image29](../images/logdna_img29.png)
+    ![ ](../images/logdna_img29.png)
 
 3. Click **Select an option**.
 
-    ![image30](../images/logdna_img30.png)
+    ![ ](../images/logdna_img30.png)
 
 4. Click **View-specific alert**.
 
-    ![image31](../images/logdna_img31.png)
+    ![ ](../images/logdna_img31.png)
 
 5. Select **email**.
 
-    ![image32](../images/logdna_img32.png)
+    ![ ](../images/logdna_img32.png)
 
 6. Configure the notification channel details.
 
-    ![image33](../images/logdna_img33.png)
+    ![ ](../images/logdna_img33.png)
 
     Change the rule to say: **When 100 or more matches appear within 30 seconds**
 
     Select **Add recipient emails**. Enter your email.
 
-    ![image34](../images/logdna_img34.png)
+    ![ ](../images/logdna_img34.png)
 
 7. Click **Test.** You will receive an email with information about the alert.
 
-    ![image35](../images/logdna_img35.png)
+    ![ ](../images/logdna_img35.png)
 
 8. Click **Save Alert**.
 
     Notice the bell icon by the view to indicate that it has alert defined.
 
-    ![image36](../images/logdna_img36.png)
+    ![ ](../images/logdna_img36.png)

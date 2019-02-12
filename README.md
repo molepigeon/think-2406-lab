@@ -22,7 +22,7 @@ Although prior experience of operating Kubernetes and using command line tools w
 
 ## Session structure
 
-The session is comprised of a number of exercises focused around each of the services that you'll be using. 
+The session is comprised of a number of exercises focused around each of the services that you'll be using.
 
 The simplest way to navigate this tutorial is the **Next** and **Previous** buttons at the bottom of each page, but you can also click a particular section in the sidebar to jump to it.
 

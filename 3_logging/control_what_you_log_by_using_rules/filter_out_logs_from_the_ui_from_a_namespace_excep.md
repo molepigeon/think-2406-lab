@@ -1,4 +1,4 @@
-## Filter out logs from the UI from a namespace except error entries {#filter-out-logs-from-the-ui-from-a-namespace-except-error-entries}
+# Filter out logs from the UI from a namespace except error entries {#filter-out-logs-from-the-ui-from-a-namespace-except-error-entries}
 
 Stop showing logs from a namespace, for example, ibm-observe namespace logs, except the ones that report an error:
 
@@ -6,24 +6,24 @@ In this step, you will learn how to exclude data from the namespace ibm-observe 
 
 Complete the following steps:
 
-1. Select the settings icon ![image52](../images/logdna_img52.png).
+1. Select the settings icon ![ ](../images/logdna_img52.png).
 
 2. Select **USAGE**.
 
-    ![image53](../images/logdna_img53.png)
+    ![ ](../images/logdna_img53.png)
 
     The _Manage Usage_ page opens.
 
-    ![image58](../images/logdna_img58.png)
+    ![ ](../images/logdna_img58.png)
 
 3. In the **Exclusion Rules** section, select **Add rule**.
 
-    ![image5](../images/logdna_img59.png)
+    ![ ](../images/logdna_img59.png)
 
 4. Enter the following query in the **Query** field:
 
-    ```
+    ```text
     Namespace:ibm-observe -level:error
     ```
 
-    ![image60](../images/logdna_img60.png)
+    ![ ](../images/logdna_img60.png)
