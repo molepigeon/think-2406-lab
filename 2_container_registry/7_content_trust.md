@@ -124,7 +124,9 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
     The pod creation is allowed because the image is signed.
 
-7. Look at the specification for your pod.
+## [optional] Exploring immutability for signed images
+
+1. Look at the specification for your pod.
 
     ```bash
     kubectl get pod mypod -o yaml
@@ -136,19 +138,19 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
     Container Image Security Enforcement has modified your pod description to set the image to the digest of the latest signed version. A digest is an immutable reference to the image content. By mutating the pod spec in this way, the cluster will always pull the version of the image that was verified by Container Image Security Enforcement, even when you delete pods created by another workload, like a deployment, later.
 
-8. Delete your `mypod` pod.
+2. Delete your `mypod` pod.
 
     ```bash
     kubectl delete --ignore-not-found pod mypod
     ```
 
-9. Turn off Content Trust.
+3. Turn off Content Trust.
 
     ```bash
     unset DOCKER_CONTENT_TRUST
     ```
 
-10. Push the vulnerable image over the top of the signed image. Note that because you turned off Content Trust, no trust data is pushed this time.
+4. Push the vulnerable image over the top of the signed image. Note that because you turned off Content Trust, no trust data is pushed this time.
 
     ```bash
     docker tag registry.ng.bluemix.net/my_namespace/hello-world:3.6 registry.ng.bluemix.net/my_namespace/signed:latest
@@ -158,7 +160,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
     docker push registry.ng.bluemix.net/my_namespace/signed:latest
     ```
 
-11. Try to create the `mypod` pod.
+5. Try to create the `mypod` pod.
 
     ```bash
     kubectl apply -f ~/mypod.yaml
@@ -166,7 +168,7 @@ Container Image Security Enforcement can be configured to implement Content Trus
 
     The pod creation is still allowed because a signed version of the image exists, even though it isn't the latest according to the Container Registry.
 
-12. Look at the specification for your pod again.
+6. Look at the specification for your pod again.
 
     ```bash
     kubectl get pod mypod -o yaml
