@@ -41,7 +41,9 @@ An IAM Service ID is a special user that can access IBM Cloud APIs, but cannot l
 
 ## Enabling IAM policy enforcement for IBM Cloud Container Registry
 
-Make sure that IAM policy enforcement is enabled in IBM Cloud Container Registry for your account. If multiple people use IBM Cloud Container Registry in your IBM Cloud account, you must have policies in place for your users before you enable policy enforcement so that your users retain access to images in your account. If you do not have policies configured for your users, use a separate IBM Cloud account for this tutorial.
+Make sure that IAM policy enforcement is enabled in IBM Cloud Container Registry for your account.
+
+**Note:** If multiple people use IBM Cloud Container Registry in your IBM Cloud account, you must have policies in place for your users before you enable policy enforcement so that your users retain access to images in your account. If you do not have policies configured for your users, use a separate IBM Cloud account for this tutorial.
 
 1. Make sure that you are targeting the correct IBM Cloud account.
 
