@@ -53,3 +53,7 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 ## Login details to the lab VM image{#3}
 
 The VM image user id is **sysadmin** and the password is **thinkibm**.
+
+## Copying and pasting content into the lab VM
+
+You can copy commands from the lab instructions and paste them into your lab VM to run them. Your lab VM has a shared clipboard option. In the control bar at the top of your VM, click the Clipboard icon, then paste the content into the box that appears. When the box disappears, you can paste in your VM.
