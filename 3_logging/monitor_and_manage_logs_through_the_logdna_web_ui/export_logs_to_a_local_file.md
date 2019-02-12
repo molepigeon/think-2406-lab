@@ -2,7 +2,7 @@
 
 **NOTE: To complete this step you need a paid plan. Upgrade the service plan.**
 
-You can export log data in JSONL format from an IBM Log Analysis with LogDNA instance into a local file.
+You can export log data in JSON Lines (JSONL) format from an IBM Log Analysis with LogDNA instance into a local file.
 
 You can export logs programmatically or from the IBM Log Analysis Web UI.
 
