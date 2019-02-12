@@ -95,7 +95,13 @@ Because the domain name of the registry is in the image name, to upload an image
     * The `EXPOSE` instruction tells the container runtime to expect that the application running inside the container listens on port 8080.
     * The `CMD` instruction defines the command to be executed when a container is started from this image.
 
-5. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
+5. Make sure that Docker Content Trust is disabled. We will explore Content Trust in a later session.
+
+    ```bash
+    unset DOCKER_CONTENT_TRUST
+    ```
+
+6. Build the image. Name the image ready for it to be sent to IBM Cloud Container Registry
 
     ```bash
     docker build -t registry.ng.bluemix.net/my_namespace/hello-world:3.6 .
