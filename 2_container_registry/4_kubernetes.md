@@ -31,12 +31,20 @@ You must download a configuration file to allow `kubectl` to control your cluste
 4. Download the configuration for your cluster.
 
     ```bash
-    $(ibmcloud ks cluster-config cluster_name --export)
+    ibmcloud ks cluster-config cluster_name --export
     ```
 
     Replace `cluster_name` with the name of your assigned cluster.
 
-5. List pods in your cluster to confirm that kubectl is configured correctly.
+    The command returns an export line to set the `KUBECONFIG` variable. If the command does not return an export line, make sure that you typed the cluster name correctly.
+
+    ```bash
+    export KUBECONFIG=/home/sysadmin/.bluemix/plugins/container-service/clusters/think-iks-100/kube-config-sjc04-think-iks-100.yaml
+    ```
+
+5. Run the export line that was returned from the `ibmcloud ks cluster-config` command.
+
+6. List pods in your cluster to confirm that kubectl is configured correctly.
 
     ```bash
     kubectl get pods
