@@ -130,6 +130,10 @@ In the previous sections, you deployed a pod into your cluster, and then you ide
 
 4. Try to create the `mypod` pod.
 
+    ```bash
+    kubectl apply -f mypod.yaml
+    ```
+
     The pod creation is allowed because the image does not have any reported vulnerabilities in Vulnerability Advisor.
 
 ## Recap
