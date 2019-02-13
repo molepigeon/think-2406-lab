@@ -12,7 +12,7 @@ Before you start, you need the following resources and information:
 
     To complete your lab by using one of the provided environments in the lab room, you must use the lab VM image. The image is preinstalled with all the CLIs that are required to complete the lab.
 
-## [optional] Sign up for an IBM Cloud account{#1}
+## [optional] Sign up for an IBM Cloud account
 
 1. Create your own [IBM Cloud account](https://cloud.ibm.com).
 
@@ -30,7 +30,7 @@ Before you start, you need the following resources and information:
 
 4. Enter your promotional code.
 
-## Request a pre-provisioned cluster{#2}
+## Request a pre-provisioned cluster
 
 Go to [Get Cluster](https://think-iks.mybluemix.net/) web page and enter your IBM ID (the email you used to sign up). Contact the lab instructors to get the lab key.
 
@@ -50,10 +50,48 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 
 ![cluster dashboard](https://raw.githubusercontent.com/rvennam/istio101/master/workshop/README_images/dashboard.png)
 
-## Login details to the lab VM image{#3}
+## Configure kubectl to control your Kubernetes cluster
 
-The VM image user id is **sysadmin** and the password is **thinkibm**.
+`kubectl` is the command-line tool for administering Kubernetes clusters. In this lab, you will be using `kubectl` to control the cluster that you were assigned in the _Getting Started_ section. If you haven't had a cluster assigned to you, go back and complete that section now.
 
-## Copying and pasting content into the lab VM
+You must download a configuration file to allow `kubectl` to control your cluster.
 
-You can copy commands from the lab instructions and paste them into your lab VM to run them. Your lab VM has a shared clipboard option. In the control bar at the top of your VM, click the Clipboard icon, then paste the content into the box that appears. When the box disappears, you can paste in your VM.
+1. Log in to IBM Cloud. When prompted to select an account, choose the one called **IBM**.
+
+    ```bash
+    ibmcloud login
+    ```
+
+2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool. Unless you changed the region in the tool, select `us-south`.
+
+    ```bash
+    ibmcloud ks region-set
+    ```
+
+3. List your clusters.
+
+    ```bash
+    ibmcloud ks clusters
+    ```
+
+4. Download the configuration for your cluster.
+
+    ```bash
+    ibmcloud ks cluster-config cluster_name --export
+    ```
+
+    Replace `cluster_name` with the name of your assigned cluster.
+
+    The command returns an export line to set the `KUBECONFIG` variable. If the command does not return an export line, make sure that you typed the cluster name correctly.
+
+    ```bash
+    export KUBECONFIG=/home/sysadmin/.bluemix/plugins/container-service/clusters/think-iks-100/kube-config-sjc04-think-iks-100.yaml
+    ```
+
+5. Run the export line that was returned from the `ibmcloud ks cluster-config` command.
+
+6. List pods in your cluster to confirm that kubectl is configured correctly.
+
+    ```bash
+    kubectl get pods
+    ```

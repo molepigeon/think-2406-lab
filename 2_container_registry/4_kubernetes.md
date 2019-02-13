@@ -4,52 +4,6 @@ In this section, you will configure your Kubernetes cluster to access your image
 
 When you create an IBM Cloud Kubernetes Service cluster in your IBM Cloud account, the cluster is configured automatically to access all images in your account. If you're using your own cluster, or would like to control which images your cluster can access, you can configure the cluster yourself. It's useful to know what the automation is doing for you, so we'll work through configuring your cluster to use the Service ID that you created in the previous section to access your images.
 
-## Configuring kubectl to control your Kubernetes cluster
-
-`kubectl` is the command-line tool for administering Kubernetes clusters. In this lab, you will be using `kubectl` to control the cluster that you were assigned in the _Getting Started_ section. If you haven't had a cluster assigned to you, go back and complete that section now.
-
-You must download a configuration file to allow `kubectl` to control your cluster.
-
-1. Log in to IBM Cloud. When prompted to select an account, choose the one called **IBM**.
-
-    ```bash
-    ibmcloud login
-    ```
-
-2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool. Unless you changed the region in the tool, select `us-south`.
-
-    ```bash
-    ibmcloud ks region-set
-    ```
-
-3. List your clusters.
-
-    ```bash
-    ibmcloud ks clusters
-    ```
-
-4. Download the configuration for your cluster.
-
-    ```bash
-    ibmcloud ks cluster-config cluster_name --export
-    ```
-
-    Replace `cluster_name` with the name of your assigned cluster.
-
-    The command returns an export line to set the `KUBECONFIG` variable. If the command does not return an export line, make sure that you typed the cluster name correctly.
-
-    ```bash
-    export KUBECONFIG=/home/sysadmin/.bluemix/plugins/container-service/clusters/think-iks-100/kube-config-sjc04-think-iks-100.yaml
-    ```
-
-5. Run the export line that was returned from the `ibmcloud ks cluster-config` command.
-
-6. List pods in your cluster to confirm that kubectl is configured correctly.
-
-    ```bash
-    kubectl get pods
-    ```
-
 ## [optional] Exploring default Image Pull Secrets
 
 Kubernetes stores authentication information for container registries in resources called Image Pull Secrets. Each Image Pull Secret contains a single username and password for a single registry.
@@ -104,29 +58,11 @@ The token in the default secret has access to pull images that are owned by the 
     kubectl create secret docker-registry think-registry-demo --docker-server registry.ng.bluemix.net --docker-username iamapikey --docker-password <apikey> --docker-email a@b.com
     ```
 
-2. As with the default Image Pull Secrets, you can add your new Image Pull Secret to the default Service Account so that you don't have to manually add the secret to each pod that you run. You can do this interactively or by using `kubectl patch`.
+2. Add your new Image Pull Secret to the default Service Account so that you don't have to manually add the secret to each pod that you run.
 
-    1. Option 1: Edit the default Service Account interactively, and add your new secret to the list:
-
-        1. Open the default Service Account for editing. The default editor for `kubectl edit` is `vim`.
-
-            ```bash
-            kubectl edit sa default
-            ```
-
-        2. Add the following YAML to the bottom of the existing `imagePullSecrets` list. In vim, press `I` to enter insert mode.
-
-            ```yaml
-            - name: think-registry-demo
-            ```
-
-        3. Save and close the file.
-
-    2. Option 2: Patch the default Service Account. `kubectl patch` allows you to specify a patch, in this case a JSON patch, to apply to the resource. You can use this to automate rollouts.
-
-        ```bash
-        kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'
-        ```
+    ```bash
+    kubectl patch sa default --type="json" --patch '[{"op":"add", "path":"/imagePullSecrets/-", "value": {"name":"think-registry-demo"}}]'
+    ```
 
 ## Starting a pod
 
