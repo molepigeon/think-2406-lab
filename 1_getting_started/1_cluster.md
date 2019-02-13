@@ -62,10 +62,10 @@ You must download a configuration file to allow `kubectl` to control your cluste
     ibmcloud login
     ```
 
-2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool. Unless you changed the region in the tool, select `us-south`.
+2. Make sure that you are targeting the IBM Cloud Kubernetes Service region that you selected in the Get Cluster tool.
 
     ```bash
-    ibmcloud ks region-set
+    ibmcloud ks region-set us-south
     ```
 
 3. List your clusters.
@@ -90,8 +90,8 @@ You must download a configuration file to allow `kubectl` to control your cluste
 
 5. Run the export line that was returned from the `ibmcloud ks cluster-config` command.
 
-6. List pods in your cluster to confirm that kubectl is configured correctly.
+6. List namespaces in your cluster to confirm that kubectl is configured correctly.
 
     ```bash
-    kubectl get pods
+    kubectl get namespaces
     ```
