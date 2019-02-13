@@ -7,7 +7,7 @@
 ## Workshop
 
 * [Contents](parts.md)
-  * [Part 1: Securing your IBM Cloud Kubernetes Service workloads by using IBM Cloud Container Registry](2_container_registry/1_registry.md)
+  * [Securing your IBM Cloud Kubernetes Service workloads by using IBM Cloud Container Registry](2_container_registry/1_registry.md)
     * [Creating a namespace](2_container_registry/2_onboarding.md)
     * [Configuring Identity and Access Management](2_container_registry/3_iam.md)
     * [Using IBM Cloud Container Registry with Kubernetes clusters](2_container_registry/4_kubernetes.md)
@@ -15,7 +15,7 @@
     * [Protecting your cluster from vulnerable images](2_container_registry/6_cise.md)
     * [Using content trust](2_container_registry/7_content_trust.md)
     * [Stretch goal: Trust pinning](2_container_registry/8_trust_pinning.md)
-  * [Part 2: Cluster-level logging by using IBM Log Analysis with LogDNA](3_logging/1_logging.md)
+  * [Cluster-level logging by using IBM Log Analysis with LogDNA](3_logging/1_logging.md)
     * [Provision an instance of IBM Log Analysis with LogDNA](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/README.md)
       * [Step 1: Grant permissions to your user ID](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/step_1_grant_permissions_in_the_ibm_cloud.md)
       * [Step 2: Provisioning an instance from the Observability dashboard](3_logging/provision_an_instance_of_ibm_log_analysis_with_log/step_2_provisioning_an_instance_from_the_observabi.md)
@@ -32,7 +32,7 @@
       * [Filter out log data from storage for a worker except error entries while keeping visibility of all lines](3_logging/control_what_you_log_by_using_rules/filter_out_log_data_from_storage_for_a_worker_exce.md)
       * [Filter out kube-system logs  from storage in a cluster except error entries](3_logging/control_what_you_log_by_using_rules/filter_out_kube-system_logs_from_storage_in_a_clus.md)
       * [Filter out logs from the UI from a namespace except error entries](3_logging/control_what_you_log_by_using_rules/filter_out_logs_from_the_ui_from_a_namespace_excep.md)
-  * [Part 3: Monitoring a Kubernetes cluster in IBM Cloud by using IBM Cloud Monitoring with Sysdig](4_monitoring/1_monitoring.md)
+  * [Monitoring a Kubernetes cluster in IBM Cloud by using IBM Cloud Monitoring with Sysdig](4_monitoring/1_monitoring.md)
     * [Provision an instance of IBM Cloud Monitoring with Sysdig](4_monitoring/provision_an_instance_of_ibm_cloud_monitoring_with/README.md)
       * [Step 1: Grant your user permissions to provision an instance in the IBM Cloud](4_monitoring/provision_an_instance_of_ibm_cloud_monitoring_with/step_1_grant_your_user_permissions_to_provision_an.md)
       * [Step 2: Provisioning an instance from the Observability dashboard](4_monitoring/provision_an_instance_of_ibm_cloud_monitoring_with/step_2_provisioning_an_instance_from_the_observabi.md)
