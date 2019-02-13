@@ -2,7 +2,7 @@
 
 Content Trust allows you to sign images, but it gives control over image signatures to the first person who pushes signed data into the trust server. When using trusted content in the way that you did in the previous section, you trusted that the IBM Cloud Container Registry trust server was returning valid signed digests.
 
-A proper security model would hold true even if the trust server were compromised. Your cluster should be able to detect when the signature is invalid, and prevent deployment of the invalid image.
+A defense in depth security model would hold true even if the trust server were compromised. Your cluster should be able to detect when the signature is invalid, and prevent deployment of the invalid image.
 
 With Content Trust, you can add multiple people's keys as signers in each image repository, and you can configure Container Image Security Enforcement to require a signature from a given signer. When it is configured to require a signature from a particular signer, Container Image Security Enforcement also verifies their signature by using that signer's public key.
 
