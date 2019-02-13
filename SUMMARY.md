@@ -12,7 +12,7 @@
     * [Configuring Identity and Access Management](2_container_registry/3_iam.md)
     * [Using IBM Cloud Container Registry with Kubernetes clusters](2_container_registry/4_kubernetes.md)
     * [Viewing image vulnerabilities](2_container_registry/5_vulnerability_advisor.md)
-    * [[Optional] Enforcing security in your cluster](parts.md)
+    * [[Optional] Enforcing security in your cluster](2_container_registry/cise_intro.md)
       * [Protecting your cluster from vulnerable images](2_container_registry/6_cise.md)
       * [Using content trust](2_container_registry/7_content_trust.md)
       * [Trust pinning](2_container_registry/8_trust_pinning.md)

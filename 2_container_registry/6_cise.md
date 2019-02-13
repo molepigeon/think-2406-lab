@@ -1,7 +1,5 @@
 # Container Image Security Enforcement
 
-With Container Image Security Enforcement, you can verify your container images before you deploy them to your cluster in IBM Cloud Kubernetes Service. You can control where images are deployed from, enforce Vulnerability Advisor policies, and ensure that content trust is properly applied to the image. If an image does not meet your policy requirements, the pod is not deployed to your cluster or updated.
-
 Container Image Security Enforcement retrieves information about image content trust and vulnerabilities from IBM Cloud Container Registry. You can choose to block or to allow deployment of images that are stored in other registries, but you cannot use vulnerability or trust enforcement for these images.
 
 In this section, you will install Container Image Security Enforcement into your cluster, and use it to control deployment of your image.
