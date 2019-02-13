@@ -4,4 +4,4 @@ With Container Image Security Enforcement, you can verify your container images 
 
 **Note:** This section will add another 30 minutes to the duration of this part of the tutorial. If you would like enough time to explore the Logging and Monitoring parts in detail during the session, you should consider skipping this section and returning if you have time once you have completed those parts.
 
-If you'd like to skip this section, go back to the [Contents](../parts) page and select your next part.
+If you'd like to skip this section, go back to the [Contents](../parts.md) page and select your next part.
