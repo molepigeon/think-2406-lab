@@ -73,7 +73,7 @@ Let's look at the Image Pull Secrets that have been added to your cluster by def
 3. Inspect the Image Pull Secret contents. Copy the secret data and paste it into the base64 decode command.
 
     ```bash
-    echo -n <paste here> | base64 --decode | jq
+    echo -n <paste here> | base64 --decode
     ```
 
     The data is a JSON object containing a username and password for `registry.ng.bluemix.net`. The username is `token`.
