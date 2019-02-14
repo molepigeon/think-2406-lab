@@ -6,6 +6,8 @@ In this section, you will create a namespace in IBM Cloud Container Registry for
 
 You can use the `ibmcloud cr` command line tool to interact with IBM Cloud Container Registry. The Container Registry plugin is installed on your lab machine, but you can install it on your own workstation once `ibmcloud` is installed by typing `ibmcloud plugin install container-registry`.
 
+Switch to the `IBM CSS` tab on your lab machine to access your lab VM, and then open _Terminal Emulator_.
+
 1. Run `ibmcloud cr`. A list of valid commands is displayed.
 2. Run `ibmcloud cr images --help`. Valid parameters for the image list command is displayed.
 
