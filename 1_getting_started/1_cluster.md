@@ -54,7 +54,7 @@ Under **Kubernetes Clusters**, one cluster is shown. You will use this cluster f
 
 `kubectl` is the command-line tool for administering Kubernetes clusters. In this lab, you will be using `kubectl` to control the cluster that you were assigned in the _Getting Started_ section. If you haven't had a cluster assigned to you, go back and complete that section now.
 
-You must download a configuration file to allow `kubectl` to control your cluster.
+You must download a configuration file to allow `kubectl` to control your cluster. Switch to the `IBM CSS` tab on your lab machine to access your lab VM, and then open _Terminal Emulator_ and enter the following commands:
 
 1. Log in to IBM Cloud. When prompted to select an account, choose the one called **IBM**.
 
